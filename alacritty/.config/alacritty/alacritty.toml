@@ -1,0 +1,20 @@
+import = ["/home/scbj/.config/alacritty/summer.toml"]
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Victor Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Victor Mono"
+style = "BoldItalic"
+
+[font.italic]
+family = "Victor Mono"
+style = "SemiBoldItalic"
+
+[font.normal]
+family = "Victor Mono"
+style = "SemiBold"
