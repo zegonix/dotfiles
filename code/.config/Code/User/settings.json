@@ -1,0 +1,33 @@
+// path="~/.config/Code/User
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontFamily": "'Victor Mono'",
+    "editor.fontWeight": 500,
+    "extensions.ignoreRecommendations": true,
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.codeLens": true,
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "vhdl.formatter.case.keyword": "LowerCase",
+    "vhdl.formatter.case.typename": "LowerCase",
+    "vhdl.formatter.align.all": true,
+    "vhdl.formatter.align.function": true,
+    "vhdl.formatter.align.generic": true,
+    "vhdl.formatter.align.port": true,
+    "vhdl.formatter.align.procedure": true,
+    "vhdl.formatter.align.mode": "Global",
+    "editor.minimap.renderCharacters": false,
+    "update.showReleaseNotes": false,
+    "editor.accessibilityPageSize": 100,
+    "editor.fontSize": 15,
+    "editor.stickyScroll.enabled": false,
+    "files.associations": {
+        "*.txt": "shellscript"
+    },
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+}
