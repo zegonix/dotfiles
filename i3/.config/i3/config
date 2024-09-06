@@ -181,7 +181,7 @@ focus_follows_mouse no
 ############################
 
 # window border style
-default_border pixel 3
+default_border pixel 0
 
 # gaps between windows and screen border
 gaps inner 10 px
