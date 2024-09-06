@@ -35,5 +35,5 @@ Hotkey_7_mask=0
 NumHotkeys=8
 
 [pipewire]
-volume_left=72
-volume_right=72
+volume_left=45
+volume_right=45

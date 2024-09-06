@@ -182,7 +182,7 @@ default_border pixel 3
 gaps inner 8 px
 
 # defining colors
-set $bord_focus #d5f188
+set $bord_focus #D5F188
 set $back_focus #FFFFFF
 set $text_focus #000000
 
