@@ -4,17 +4,17 @@ import = ["/home/scbj/.config/alacritty/summer.toml"]
 size = 13.0
 
 [font.bold]
-family = "Victor Mono"
+family = "Victor Mono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Victor Mono"
+family = "Victor Mono Nerd Font"
 style = "BoldItalic"
 
 [font.italic]
-family = "Victor Mono"
+family = "Victor Mono Nerd Font"
 style = "SemiBoldItalic"
 
 [font.normal]
-family = "Victor Mono"
+family = "Victor Mono Nerd Font"
 style = "SemiBold"

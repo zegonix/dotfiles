@@ -37,3 +37,7 @@ NumHotkeys=8
 [pipewire]
 volume_left=45
 volume_right=45
+
+[qtui]
+column_widths=25,25,538,249,81,303,175,25,100,25,75,275,275,275,75,275,175,75
+playlist_columns=playing title artist album year length
