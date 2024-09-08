@@ -15,7 +15,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:VictorMono SemiBold 12
+font pango:VictorMonoNerdFont SemiBold 12
 
 
 ###################################
@@ -29,7 +29,7 @@ exec --no-startup-id feh --bg-scale ~/dotfiles/images/city_skyline.png
 
 # clean up and start polybar
 exec_always --no-startup-id killall polybar
-exec_always --no-startup-id bash /home/scbj/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id bash ~/.config/polybar/launch_polybar.sh
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -174,27 +174,29 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #########################
 
 focus_follows_mouse no
-
+mouse_warping none
 
 ############################
 # configuring presentation #
 ############################
 
 # window border style
-default_border pixel 0
+default_border pixel 2
 
 # gaps between windows and screen border
-gaps inner 10 px
+gaps inner 16 px
 
 # defining colors
-set $bord_focus #D5F188
+set $bord_focus #8070A0
+set $indc_focus #9080C0
 set $back_focus #FFFFFF
 set $text_focus #000000
+set $bord_inact #181830
 
 # class                 border      backgr.     text        indicator   child_border
-client.focused          $bord_focus $back_focus $text_focus $bord_focus $bord_focus
+client.focused          $bord_focus $back_focus $text_focus $indc_focus $bord_focus
 client.focused_inactive #333333     #5f676a     #ffffff     #484e50     #5f676a
-client.unfocused        #333333     #222222     #888888     #292d2e     #222222
+client.unfocused        $bord_inact $bord_inact $text_focus $bord_inact $bord_inact
 client.urgent           #2f343a     #900000     #ffffff     #900000     #900000
 client.placeholder      #000000     #0c0c0c     #ffffff     #000000     #0c0c0c
 
