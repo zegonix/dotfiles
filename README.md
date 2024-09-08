@@ -13,6 +13,7 @@ A collection of configuration files meant to be used with GNU stow.
 * feh
 * firefox
 * git
+* man
 * pavucontrol
 * picom
 * polybar
