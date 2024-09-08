@@ -21,4 +21,4 @@ export EZA_CONFIG_DIR="~/.config/eza/"
 eval "$(starship init bash)"
 
 # setup qmk completion
-source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
+# source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
