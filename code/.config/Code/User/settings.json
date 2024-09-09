@@ -30,4 +30,8 @@
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
     ],
+    "editor.codeLensFontFamily": "'Victor Mono'",
+    "editor.inlayHints.fontFamily": "'Victor Mono'",
+    "terminal.integrated.fontFamily": "'Victor Mono SemiBold'",
+    "terminal.integrated.fontSize": 16,
 }
