@@ -24,7 +24,7 @@ font pango:VictorMonoNerdFont SemiBold 12
 
 # start compositor and polybar, etc.
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/dotfiles/images/city_skyline.png
+exec --no-startup-id feh --bg-fill ~/dotfiles/images/city_skyline.png
 # exec --no-startup-id dunst
 
 # clean up and start polybar
