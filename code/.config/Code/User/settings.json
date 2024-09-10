@@ -1,7 +1,7 @@
 // path="~/.config/Code/User
 {
     "workbench.colorTheme": "Visual Studio Dark",
-    "editor.fontFamily": "'Victor Mono'",
+    "editor.fontFamily": "'VictorMono Nerd Font'",
     "editor.fontWeight": 500,
     "extensions.ignoreRecommendations": true,
     "workbench.startupEditor": "none",
@@ -30,8 +30,8 @@
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
     ],
-    "editor.codeLensFontFamily": "'Victor Mono'",
-    "editor.inlayHints.fontFamily": "'Victor Mono'",
+    "editor.codeLensFontFamily": "'VictorMono Nerd Font'",
+    "editor.inlayHints.fontFamily": "'VictorMono Nerd Font'",
     "terminal.integrated.fontFamily": "'Victor Mono SemiBold'",
     "terminal.integrated.fontSize": 16,
 }

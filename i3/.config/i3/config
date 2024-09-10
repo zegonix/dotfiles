@@ -182,6 +182,7 @@ mouse_warping none
 
 # window border style
 default_border pixel 2
+default_floating_border pixel 0
 
 # gaps between windows and screen border
 gaps inner 16 px
