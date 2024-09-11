@@ -179,7 +179,7 @@ mouse_warping none
 ############################
 
 # load background image
-exec --no-startup-id feh --bg-fill ~/dotfiles/images/forest_sunny.png
+exec --no-startup-id feh --bg-fill ~/dotfiles/images/blaa.jpg
 
 # window border style
 default_border pixel 2
