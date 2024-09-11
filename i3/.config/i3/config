@@ -24,8 +24,6 @@ font pango:VictorMonoNerdFont SemiBold 12
 
 # start compositor and polybar, etc.
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-fill ~/dotfiles/images/city_skyline.png
-# exec --no-startup-id dunst
 
 # clean up and start polybar
 exec_always --no-startup-id killall polybar
@@ -180,25 +178,29 @@ mouse_warping none
 # configuring presentation #
 ############################
 
+# load background image
+exec --no-startup-id feh --bg-fill ~/dotfiles/images/forest_sunny.png
+
 # window border style
 default_border pixel 2
 default_floating_border pixel 0
+for_window [class=".*"] border pixel 3
 
 # gaps between windows and screen border
 gaps inner 16 px
 
 # defining colors
-set $bord_focus #8070A0
-set $indc_focus #9080C0
+set $bord_focus #0022a8
+set $indc_focus #A0A0FF
 set $back_focus #FFFFFF
 set $text_focus #000000
-set $bord_inact #181830
+set $transp     #00000000
 
 # class                 border      backgr.     text        indicator   child_border
-client.focused          $bord_focus $back_focus $text_focus $indc_focus $bord_focus
-client.focused_inactive #333333     #5f676a     #ffffff     #484e50     #5f676a
-client.unfocused        $bord_inact $bord_inact $text_focus $bord_inact $bord_inact
-client.urgent           #2f343a     #900000     #ffffff     #900000     #900000
-client.placeholder      #000000     #0c0c0c     #ffffff     #000000     #0c0c0c
+client.focused          $bord_focus $back_focus $text_focus $bord_focus $bord_focus
+client.focused_inactive $transp     $back_focus $text_focus $transp     $transp
+client.unfocused        $transp     $back_focus $text_focus $transp     $transp
+client.urgent           $transp     $back_focus $text_focus $transp     $transp
+client.placeholder      $transp     $back_focus $text_focus $transp     $transp
 
 client.background       #ffffff
