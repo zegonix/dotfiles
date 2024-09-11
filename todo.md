@@ -4,3 +4,5 @@
 * configure 'dunst'
 * configure 'logind'
 * configure lock screen (probably i3lock)
+* configure starship
+* configure alacritty colors and eza..
