@@ -1,5 +1,11 @@
-import = ["/home/scbj/.config/alacritty/summer.toml"]
+#import = ["~/.config/alacritty/zegonix.toml"]
+import = ["~/.config/alacritty/summer.toml"]
 
+# history configuration
+[scrolling]
+history = 100000
+
+# font configuration
 [font]
 size = 13.0
 

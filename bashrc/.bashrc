@@ -15,7 +15,7 @@ PS1='[\u@\h \W]\$ '
 
 
 # setup eza (continuation of exa)
-export EZA_CONFIG_DIR="~/.config/eza/"
+EZA_COLORS="di=97"
 
 # setup starship
 eval "$(starship init bash)"

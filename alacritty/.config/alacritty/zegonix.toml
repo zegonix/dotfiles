@@ -1,0 +1,40 @@
+[colors.primary]
+background = "0x202830"
+foreground = "0xD8D8D0"
+dim_foreground = "0xA0A0A0"
+bright_foreground = "0xFFFFFF"
+
+[colors.cursor]
+cursor = "0xBBBBBB"
+text = "0x202830"
+
+[colors.normal]
+black =   "0x000000" # v
+red =     "0xFF0120" # v
+green =   "0x0CB653" # v
+yellow =  "0x5EB34D" # v
+blue =    "0x0E4081" # v
+magenta = "0xE02482" # v
+cyan =    "0x15D7E5" # v
+white =   "0xE0E0E8" # v
+
+[colors.bright]
+black =   "0x101010" # v
+red =     "0xFF4054" # v
+green =   "0x4BDD94" # v
+yellow =  "0x9EDF6D" # v
+blue =    "0x72AFE3" # v
+magenta = "0xFBADDD" # v
+cyan =    "0x65E7F1" # v
+white =   "0xFFFFFF" # v
+
+[colors.dim]
+black =   "0x000000" # v
+red =     "0xB30015" # v
+green =   "0x165A36" # v
+yellow =  "0x2A5C23" # v
+blue =    "0x001D42" # v
+magenta = "0x9034B2" # v
+cyan =    "0x109EA8" # v
+white =   "0xC8C8D0" # v
+
