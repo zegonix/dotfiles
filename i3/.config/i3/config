@@ -190,9 +190,9 @@ for_window [class=".*"] border pixel 2
 gaps inner 12 px
 
 # defining colors
-set $cyan       #15D7E5
-set $indc_focus #A0A0FF
-set $back_focus #FFFFFF
+set $cyan       #15d7e5
+set $indc_focus #a0a0ff
+set $back_focus #ffffff
 set $text_focus #000000
 set $transp     #00000000
 
