@@ -9,18 +9,24 @@ history = 100000
 [font]
 size = 13.0
 
-[font.bold]
-family = "VictorMono Nerd Font"
-style = "Bold"
-
-[font.bold_italic]
-family = "VictorMono Nerd Font"
-style = "BoldItalic"
-
-[font.italic]
-family = "VictorMono Nerd Font"
-style = "SemiBoldItalic"
-
 [font.normal]
 family = "VictorMono Nerd Font"
 style = "SemiBold"
+# family = "Meslo LGS Nerd Font"
+# style = "Regular"
+
+[font.bold]
+family = "VictorMono Nerd Font"
+# family = "Mononoki Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "VictorMono Nerd Font"
+# family = "Mononoki Nerd Font Mono"
+style = "SemiBoldItalic"
+
+[font.bold_italic]
+family = "VictorMono Nerd Font"
+# family = "Mononoki Nerd Font Mono"
+style = "BoldItalic"
+

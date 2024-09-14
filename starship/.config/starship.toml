@@ -1,60 +1,110 @@
 format = """
 \n\
+[╭─ ](bold)[⟨](bold zx_light_magenta)\
+$status\
+[//](bold zx_magenta)\
 $username\
-[](bg:#1E3769 fg:#361C72)\
+[//](bold zx_cyan)\
 $directory\
-[](fg:#1E3769 bg:#215189)\
-$git_branch\
-$git_status\
-[](fg:#215189 bg:#2A76A9)\
-$time\
-[](fg:#2A76A9)\n\
->> 
+[//](bold zx_light_yellow)\
+$git_branch[-](zx_light_magenta)$git_status\
+[//](bold zx_yellow)\
+$jobs\
+[⟩ ](bold zx_dark_cyan)\
+$fill$shell\
+\n[╰─](bold) 
 """
 
+# \n[╰─](bold zx_light_magenta) 
 # Disable the blank line at the start of the prompt
 add_newline = false
+
+palette = 'zegonix'
+
+# custom colors
+[palettes.zegonix]
+zx_green = "#0CB653"
+zx_light_green = "#4BDD94"
+zx_yellow = "#5EB34D"
+zx_light_yellow = "#9EDF6D"
+zx_blue = "#0E4081"
+zx_light_blue = "#72AFE3"
+zx_magenta = "#E02482"
+zx_light_magenta = "#FBADDD"
+zx_cyan = "#15D7E5"
+zx_light_cyan = "#65E7F1"
+zx_dark_cyan = "#109EA8"
+zx_white = "#DFDFD0"
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
 disabled = false
 show_always = true
-style_user = "bg:#361C72 fg:#DFDFD0"
-style_root = "bg:#361C72 fg:#DFDFD0"
+style_user = "fg:zx_white"
+style_root = "fg:zx_white"
 format = '[ $user ]($style)'
 
 [directory]
 disabled = false
-style = "bg:#1E3769 fg:#DFDFD0"
+style = "fg:zx_white"
 format = "[ $path ]($style)"
-truncation_length = 8
+truncation_length = 4
 truncation_symbol = "…/"
 truncate_to_repo = false
 
 [git_branch]
 disabled = false
 symbol = ""
-style = "bg:#215189 fg:#DFDFD0"
+style = "fg:zx_white"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
 disabled = false
-style = "bg:#215189 fg:#DFDFD0"
-format = '[$all_status$ahead_behind ]($style)'
+style = "fg:zx_white"
+format = '[ $all_status$ahead_behind ]($style)'
+conflicted = ' '
+ahead = ' '
+behind = ' '
+diverged = ' '
+up_to_date = ' '
+untracked = ' '
+stashed = ''
+modified = ' '
+staged = ' '
+renamed = ' '
+deleted = ' '
+typechanged = ''
+
+[jobs]
+disabled = false
+symbol_threshold = 0
+number_threshold = 1
+symbol = '󰁀 '
+style = 'bold fg:zx_white'
+format ="[ $symbol$number ]($style)"
+
 
 [time]
-disabled = false
-style = "bg:#2A76A9 fg:#DFDFD0"
+disabled = true
+style = "fg:zx_light_blue"
 format = '[ $time ]($style)'
 use_12hr = false
 
 [status]
-disabled = true
-symbol = "[failure](fg:red)"
-success_symbol = "[success](fg:green)"
+disabled = false
+style = "fg:zx_white"
+format = "[ $symbol ]($style)"
+symbol = '[\[err\]](bold)'
+success_symbol = '[\[ok\]](bold)'
 
 [fill]
-disabled = true
-symbol = ' '
-style = ''
+disabled = false
+symbol = '─'
+style = 'bold zx_white'
+
+[shell]
+disabled = false
+style = "zx_green"
+format = ' [\[]($style)[$indicator](fg:zx_white)[\]]($style) '
+bash_indicator = "bash"

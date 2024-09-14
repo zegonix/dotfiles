@@ -1,0 +1,60 @@
+format = """
+\n\
+$username\
+[](bg:#1E3769 fg:#361C72)\
+$directory\
+[](fg:#1E3769 bg:#215189)\
+$git_branch\
+$git_status\
+[](fg:#215189 bg:#2A76A9)\
+$time\
+[](fg:#2A76A9)\n\
+>> 
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+disabled = false
+show_always = true
+style_user = "bg:#361C72 fg:#DFDFD0"
+style_root = "bg:#361C72 fg:#DFDFD0"
+format = '[ $user ]($style)'
+
+[directory]
+disabled = false
+style = "bg:#1E3769 fg:#DFDFD0"
+format = "[ $path ]($style)"
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+disabled = false
+symbol = ""
+style = "bg:#215189 fg:#DFDFD0"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+disabled = false
+style = "bg:#215189 fg:#DFDFD0"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+style = "bg:#2A76A9 fg:#DFDFD0"
+format = '[ $time ]($style)'
+use_12hr = false
+
+[status]
+disabled = true
+symbol = "[failure](fg:red)"
+success_symbol = "[success](fg:green)"
+
+[fill]
+disabled = true
+symbol = ' '
+style = ''
