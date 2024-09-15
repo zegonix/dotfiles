@@ -1,7 +1,7 @@
 format = """
 \n\
 [╭─ ](bold)[⟨](bold zx_light_magenta)\
-$status\
+$shell\
 [//](bold zx_magenta)\
 $username\
 [//](bold zx_cyan)\
@@ -11,7 +11,7 @@ $git_branch[-](zx_light_magenta)$git_status\
 [//](bold zx_yellow)\
 $jobs\
 [⟩ ](bold zx_dark_cyan)\
-$fill$shell\
+$fill$status\
 \n[╰─](bold) 
 """
 
@@ -35,7 +35,7 @@ zx_cyan = "#15D7E5"
 zx_light_cyan = "#65E7F1"
 zx_dark_cyan = "#109EA8"
 zx_white = "#DFDFD0"
-zx_gray = "#909080"
+zx_gray = "#808078"
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -95,7 +95,7 @@ use_12hr = false
 [status]
 disabled = false
 style = "fg:zx_white"
-format = ' [\[](bold zx_gray)[$symbol]($style)[\]](bold zx_gray) '
+format = ' [\[](bold fg:zx_green)[$symbol]($style)[\]](bold zx_green) '
 symbol = '[err](bold)'
 success_symbol = '[ok](bold)'
 
@@ -106,6 +106,6 @@ style = 'bold zx_white'
 
 [shell]
 disabled = false
-style = "bold zx_green"
-format = ' [\[]($style)[$indicator](fg:zx_white)[\]]($style) '
+style = "bold fg:zx_white"
+format = ' [\[](bold zx_gray)[$indicator]($style)[\]](bold zx_gray) '
 bash_indicator = "bash"

@@ -1,0 +1,21 @@
+configuration {
+  modes: "combi,window,drun,ssh";
+  font: "Victor Mono Nerd Font 12";
+  location: 0;
+  terminal: "alacritty";
+  case-sensitive: false;
+  combi-modes: "window,drun,run,ssh";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+* {
+  background-color: #080B1B;
+}
+
