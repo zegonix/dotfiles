@@ -1,6 +1,6 @@
 configuration {
   modes: "window,drun,run";
-  font: "Victor Mono 12";
+  font: "Victor Mono Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/

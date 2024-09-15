@@ -35,6 +35,7 @@ zx_cyan = "#15D7E5"
 zx_light_cyan = "#65E7F1"
 zx_dark_cyan = "#109EA8"
 zx_white = "#DFDFD0"
+zx_gray = "#909080"
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -94,9 +95,9 @@ use_12hr = false
 [status]
 disabled = false
 style = "fg:zx_white"
-format = "[ $symbol ]($style)"
-symbol = '[\[err\]](bold)'
-success_symbol = '[\[ok\]](bold)'
+format = ' [\[](bold zx_gray)[$symbol]($style)[\]](bold zx_gray) '
+symbol = '[err](bold)'
+success_symbol = '[ok](bold)'
 
 [fill]
 disabled = false
@@ -105,6 +106,6 @@ style = 'bold zx_white'
 
 [shell]
 disabled = false
-style = "zx_green"
+style = "bold zx_green"
 format = ' [\[]($style)[$indicator](fg:zx_white)[\]]($style) '
 bash_indicator = "bash"

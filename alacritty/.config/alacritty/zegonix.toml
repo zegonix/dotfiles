@@ -16,7 +16,7 @@ yellow =  "0x5EB34D" # v
 blue =    "0x0E4081" # v
 magenta = "0xE02482" # v
 cyan =    "0x15D7E5" # v
-white =   "0xE0E0E8" # v
+white =   "0xD8D8D0" # v
 
 [colors.bright]
 black =   "0x101010" # v
@@ -36,5 +36,11 @@ yellow =  "0x2A5C23" # v
 blue =    "0x001D42" # v
 magenta = "0x9034B2" # v
 cyan =    "0x109EA8" # v
-white =   "0xC8C8D0" # v
+white =   "0xC8C8B8" # v
 
+[[colors.indexed_colors]]
+index = 16
+color = "0x94B5DB"
+[[colors.indexed_colors]]
+index = 17
+color = "0xDCC94C"

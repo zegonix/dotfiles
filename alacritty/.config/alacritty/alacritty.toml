@@ -1,5 +1,5 @@
-#import = ["~/.config/alacritty/zegonix.toml"]
-import = ["~/.config/alacritty/summer.toml"]
+import = ["~/.config/alacritty/zegonix.toml"]
+# import = ["~/.config/alacritty/summer.toml"]
 
 # history configuration
 [scrolling]
@@ -11,22 +11,17 @@ size = 13.0
 
 [font.normal]
 family = "VictorMono Nerd Font"
-style = "SemiBold"
-# family = "Meslo LGS Nerd Font"
-# style = "Regular"
+style = "Regular"
 
 [font.bold]
 family = "VictorMono Nerd Font"
-# family = "Mononoki Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
 family = "VictorMono Nerd Font"
-# family = "Mononoki Nerd Font Mono"
 style = "SemiBoldItalic"
 
 [font.bold_italic]
 family = "VictorMono Nerd Font"
-# family = "Mononoki Nerd Font Mono"
 style = "BoldItalic"
 
