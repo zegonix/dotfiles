@@ -1,6 +1,5 @@
 // path="~/.config/Code/User
 {
-    "workbench.colorTheme": "Visual Studio Dark",
     "editor.fontFamily": "'VictorMono Nerd Font'",
     "editor.fontWeight": 500,
     "extensions.ignoreRecommendations": true,

@@ -1,2 +1,17 @@
+configuration {
+  modes: "combi,window,drun,ssh";
+  combi-modes: "window,drun,run,ssh";
+  terminal: "alacritty";
+  case-sensitive: false;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
 
 @import "~/.config/rofi/themes/zegonix.rasi"

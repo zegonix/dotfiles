@@ -1,21 +1,49 @@
-configuration {
-  modes: "combi,window,drun,ssh";
-  font: "Victor Mono Nerd Font 12";
-  location: 0;
-  terminal: "alacritty";
-  case-sensitive: false;
-  combi-modes: "window,drun,run,ssh";
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
-}
-
 * {
-  background-color: #080B1B;
+  font: "Victor Mono Nerd Font 12";
+
+  zx-window-background: #0A0E25E8;
+  zx-window-border:     #15D7E5FF;
+  zx-prompt-background: #282848C8;
+  zx-other-blue: #162B56E6;
+  zx-light-blue: #335E86E6;
+  zx-light-cyan: #A3E2E3E6;
+  zx-text: #C8C8C8E8;
 }
 
+window {
+  location: 0;
+  width: 35%;
+  transparency: "real";
+
+  border: 1;
+  border-radius: 0;
+
+  background-color: @zx-window-background;
+  border-color: @zx-window-border;
+}
+
+inputbar {
+  spacing: 20px;
+  padding: 5px;
+
+  background-color: @zx-prompt-background;
+  text-color: @zx-text;
+}
+
+prompt {
+  background-color: @zx-prompt-background;
+  text-color: @zx-text;
+}
+
+entry {
+  background-color: @zx-prompt-background;
+  text-color: @zx-text;
+}
+
+scrollbar {
+  handle-width: 0;
+}
+
+mode-switcher {
+  enabled: true;
+}
