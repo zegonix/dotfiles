@@ -1,5 +1,5 @@
-import = ["~/.config/alacritty/zegonix.toml"]
-# import = ["~/.config/alacritty/summer.toml"]
+import = ["~/.config/alacritty/themes/zegonix.toml"]
+# import = ["~/.config/alacritty/themes/summer.toml"]
 
 # history configuration
 [scrolling]

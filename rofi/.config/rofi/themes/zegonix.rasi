@@ -1,49 +1,105 @@
 * {
-  font: "Victor Mono Nerd Font 12";
+  font: "Victor Mono Nerd Font 13";
 
-  zx-window-background: #0A0E25E8;
-  zx-window-border:     #15D7E5FF;
-  zx-prompt-background: #282848C8;
-  zx-other-blue: #162B56E6;
-  zx-light-blue: #335E86E6;
-  zx-light-cyan: #A3E2E3E6;
-  zx-text: #C8C8C8E8;
+  zx-transparent:       transparent;
+  zx-white:             #C8C8C8FF; // #C8C8C8E8;
+  zx-dark-blue:         #080E25FF; // #080E25E8;
+  zx-blue:              #203050FF; // #203050C8;
+  zx-cyan:              #15D7E5FF;
+  zx-background:        @zx-dark-blue;
+  zx-secondary:         @zx-blue;
+  zx-accent:            @zx-cyan;
+  zx-text:              @zx-white;
+
+  background-color:     transparent;
 }
 
 window {
-  location: 0;
+  location: center;
   width: 35%;
-  transparency: "real";
+
+  background-color: @zx-background;
 
   border: 1;
-  border-radius: 0;
+  border-color: @zx-accent;
 
-  background-color: @zx-window-background;
-  border-color: @zx-window-border;
+  padding: 8px;
+
+  children: [mainbox];
+}
+
+mainbox {
+  background: @zx-transparent;
+  border: 0px;
+  spacing: 8px;
+
+  children: [inputbar, listview];
 }
 
 inputbar {
-  spacing: 20px;
-  padding: 5px;
+  spacing: 40px;
+  padding: 10px;
 
-  background-color: @zx-prompt-background;
+  background-color: @zx-secondary;
   text-color: @zx-text;
+
+  border: 0 0 1px 0;
+  border-color: @zx-accent;
+
+  children: [prompt, entry];
 }
 
 prompt {
-  background-color: @zx-prompt-background;
   text-color: @zx-text;
+  text-transform: bold;
 }
 
 entry {
-  background-color: @zx-prompt-background;
+  text-color: @zx-text;
+  placeholder-color: @zx-text;
+
+  placeholder: "search";
+}
+
+listview {
+  lines: 8;
+  cycle: true;
+  scrollbar: false;
+  spacing: 5px;
+
+  border: 0px;
+  background-color: @transparent; //@zx-background;
+
+  children: [element];
+}
+
+element {
+  background-color: transparent;
+  text-color: inherit;
+  border: 0;
+
+  children: [element-text];
+}
+
+element-text {
+  padding: 5;
   text-color: @zx-text;
 }
 
-scrollbar {
-  handle-width: 0;
+element-text.normal {
+  text-color: @zx-text;
+  border: 0;
 }
 
-mode-switcher {
-  enabled: true;
+element-text.active {
+  text-color: @zx-text;
+  border: 0;
+}
+
+element-text.selected {
+  background-color: @zx-blue;
+}
+
+prompt, entry, element-text {
+  vertical-align: 0.5;
 }

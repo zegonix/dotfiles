@@ -1,5 +1,9 @@
+@theme "~/.config/rofi/themes/zegonix.rasi"
+//@import "~/.config/rofi/themes/squared-nord.rasi"
+//@import "~/.config/rofi/themes/test.rasi"
+
 configuration {
-  modes: "combi,window,drun,ssh";
+  modes: "combi,run,window,ssh";
   combi-modes: "window,drun,run,ssh";
   terminal: "alacritty";
   case-sensitive: false;
@@ -13,5 +17,3 @@ configuration {
       sorting-method:    "name";
   }
 }
-
-@import "~/.config/rofi/themes/zegonix.rasi"
