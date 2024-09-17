@@ -13,6 +13,8 @@ alias rg='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
 
 PS1='[\u@\h \W]\$ '
 
+# overwrite $TERM to avoid problems when connecting to devices via ssh
+export TERM="xterm-256color"
 
 # setup eza (continuation of exa)
 export EZA_COLORS="\
