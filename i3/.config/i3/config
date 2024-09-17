@@ -70,7 +70,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show combi
+bindsym $mod+d       exec --no-startup-id rofi -show combi
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -184,13 +185,16 @@ exec --no-startup-id feh --bg-fill ~/dotfiles/images/blaa.jpg
 # window border style
 default_border pixel 2
 default_floating_border pixel 0
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 
 # gaps between windows and screen border
 gaps inner 12 px
 
 # defining colors
 set $cyan       #15d7e5
+set $magenta    #e02482
+set $l_magenta  #fbaddd
+set $d_blue     #001d42
 set $indc_focus #a0a0ff
 set $back_focus #ffffff
 set $text_focus #000000
