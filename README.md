@@ -1,5 +1,17 @@
 # dotfiles
+
 A collection of configuration files meant to be used with GNU stow.
+
+
+## Todos
+
+* configure alacritty (indexecd) colors and eza (files and links and stuff)
+* setup shortcuts for 'xclip' (i3 conf)
+* configure 'pavucontrol' and 'blueman-manager' to use a dark theme
+* configure 'dunst'
+* configure 'logind'
+* configure lock screen (probably i3lock)
+
 
 ## Usage
 
@@ -24,6 +36,7 @@ A collection of configuration files meant to be used with GNU stow.
 * unzip
 * visual-studio-code-bin
 
+
 ### Getting the repository
 Navigate to your home directory `~/`.
 Download the repository to that directory or do it the recommended way and clone it there with git:
@@ -36,6 +49,7 @@ or
 ```
 
 **Note:** The location of the local copy is important for stow. You can put it somewhere else, but you will have to configure stow to inform it of non default source and target locations, the target is relative to the source by default.
+
 
 ### Link configurations with GNU stow
 Make sure to have `stow` installed.

@@ -1,0 +1,124 @@
+* {
+  font: "Victor Mono Nerd Font 13";
+
+  zx-transparent:       transparent;
+  zx-white:             #C8C8C8FF;
+  zx-dark-blue:         #000010EA;
+  zx-blue:              #203050C8;
+  zx-light-blue:        #5bb8ffff;
+  zx-cyan:              #15D7E5FF;
+  zx-light-grey:        #A0A0ADFF;
+  zx-dark-grey:         #202038C8;
+  zx-black:             #000000EA;
+  zx-background:        @zx-dark-blue;
+  zx-secondary:         @zx-dark-grey;
+  zx-accent:            @zx-light-blue;
+  zx-text:              @zx-white;
+
+  background-color:     transparent;
+}
+
+window {
+  location: center;
+  width: 35%;
+
+  background-color: @zx-background;
+
+  border: 0;
+  border-color: @zx-accent;
+
+  //padding: 2 12 8 12;
+
+  children: [mainbox];
+}
+
+mainbox {
+  background: @zx-transparent;
+  border: 0px;
+  spacing: 8px;
+
+  children: [inputbar, listview, mode-switcher];
+}
+
+inputbar {
+  spacing: 40px;
+  padding: 10px;
+
+  //background-color: @zx-secondary;
+  text-color: @zx-text;
+
+  border: 0 0 1px 0;
+  border-color: @zx-accent;
+
+  children: [entry];
+}
+
+prompt {
+  text-color: @zx-text;
+  text-transform: bold;
+}
+
+entry {
+  text-color: @zx-text;
+  placeholder-color: @zx-text;
+
+  placeholder: "search";
+}
+
+listview {
+  lines: 8;
+  cycle: true;
+  scrollbar: false;
+  spacing: 5px;
+
+  border: 0px;
+  background-color: @transparent; //@zx-background;
+
+  children: [element];
+}
+
+element {
+  background-color: transparent;
+  text-color: inherit;
+  border: 0;
+
+  children: [element-text];
+}
+
+element-text {
+  padding: 5;
+  text-color: @zx-text;
+}
+
+element-text.normal {
+  text-color: @zx-text;
+  border: 0;
+}
+
+element-text.active {
+  text-color: @zx-text;
+  border: 0;
+}
+
+element-text.selected {
+  background-color: @zx-secondary;
+}
+
+prompt, entry, element-text {
+  vertical-align: 0.5;
+}
+
+mode-switcher {
+  children: [button];
+}
+
+button {
+  padding: 4 0 4 0;
+  text-color: @zx-text;
+  text-transform: bold;
+}
+
+button.selected {
+  text-color: @zx-background;
+  background-color: @zx-accent;
+}

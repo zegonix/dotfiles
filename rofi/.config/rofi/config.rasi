@@ -1,10 +1,9 @@
-@theme "~/.config/rofi/themes/zegonix.rasi"
-//@import "~/.config/rofi/themes/squared-nord.rasi"
-//@import "~/.config/rofi/themes/test.rasi"
+@theme "~/.config/rofi/themes/zegonix-blue.rasi"
+//@theme "~/.config/rofi/themes/zegonix-black.rasi"
 
 configuration {
-  modes: "combi,run,window,ssh";
-  combi-modes: "window,drun,run,ssh";
+  modes: "combi,window,run,ssh";
+  combi-modes: "drun,run,ssh";
   terminal: "alacritty";
   case-sensitive: false;
   timeout {

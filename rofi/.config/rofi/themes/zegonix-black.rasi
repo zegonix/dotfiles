@@ -2,13 +2,17 @@
   font: "Victor Mono Nerd Font 13";
 
   zx-transparent:       transparent;
-  zx-white:             #C8C8C8FF; // #C8C8C8E8;
-  zx-dark-blue:         #080E25FF; // #080E25E8;
-  zx-blue:              #203050FF; // #203050C8;
+  zx-white:             #C8C8C8FF;
+  zx-dark-blue:         #080C1CEA;
+  zx-blue:              #203050C8;
+  zx-light-blue:        #6bceffff;
   zx-cyan:              #15D7E5FF;
-  zx-background:        @zx-dark-blue;
-  zx-secondary:         @zx-blue;
-  zx-accent:            @zx-cyan;
+  zx-light-grey:        #A0A0ADFF;
+  zx-dark-grey:         #202028C8;
+  zx-black:             #000000EA;
+  zx-background:        @zx-black;
+  zx-secondary:         @zx-dark-grey;
+  zx-accent:            @zx-white;
   zx-text:              @zx-white;
 
   background-color:     transparent;
@@ -20,10 +24,10 @@ window {
 
   background-color: @zx-background;
 
-  border: 1;
+  border: 0;
   border-color: @zx-accent;
 
-  padding: 8px;
+  padding: 2 12 8 12;
 
   children: [mainbox];
 }
@@ -40,7 +44,7 @@ inputbar {
   spacing: 40px;
   padding: 10px;
 
-  background-color: @zx-secondary;
+  //background-color: @zx-secondary;
   text-color: @zx-text;
 
   border: 0 0 1px 0;
@@ -97,7 +101,7 @@ element-text.active {
 }
 
 element-text.selected {
-  background-color: @zx-blue;
+  background-color: @zx-secondary;
 }
 
 prompt, entry, element-text {
