@@ -73,6 +73,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d       exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 
+# take screenshots
+bindsym $mod+s       exec --no-startup-id maim -su | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec --no-startup-id maim -su "/home/quak/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
