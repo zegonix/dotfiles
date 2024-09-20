@@ -4,6 +4,7 @@
 configuration {
   modes: "combi,window,run,ssh";
   combi-modes: "drun,run,ssh";
+  monitor: -1;
   terminal: "alacritty";
   case-sensitive: false;
   timeout {
