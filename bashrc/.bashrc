@@ -6,7 +6,8 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls -hal --color=auto'
-alias list='eza -la -o --no-permissions --group-directories-first -s=ext --color=always'
+# alias list='eza -la -o --no-permissions --group-directories-first -s=ext --color=always'
+alias list='lsd -lA'
 
 alias grep='grep --color=auto'
 alias rg='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
@@ -25,7 +26,7 @@ da=93:\
 fi=37:\
 di=1;2;36:\
 ex=4;34:\
-ln=38;5;17\
+ln=38;5;16\
 pi=31:\
 "
 

@@ -5,7 +5,7 @@ A collection of configuration files meant to be used with GNU stow.
 
 ## Todos
 
-* configure alacritty (indexecd) colors and eza (files and links and stuff)
+* configure alacritty (indexed) colors and lsd (files and links and stuff)
 * setup shortcuts for 'xclip' (i3 conf)
 * configure 'pavucontrol' and 'blueman-manager' to use a dark theme
 * configure 'dunst'
