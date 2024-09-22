@@ -10,10 +10,10 @@ text = "0x202830"
 
 [colors.normal]
 black =   "0x000000" # v
-red =     "0xFF0120" # v
+red =     "0xF00118" # v
 green =   "0x0CB653" # v
 yellow =  "0x5EB34D" # v
-blue =    "0x0E4081" # v
+blue =    "0x1F6DDB" # v
 magenta = "0xE02482" # v
 cyan =    "0x15D7E5" # v
 white =   "0xD8D8D0" # v
@@ -30,7 +30,7 @@ white =   "0xFFFFFF" # v
 
 [colors.dim]
 black =   "0x000000" # v
-red =     "0xB30015" # v
+red =     "0xB00010" # v
 green =   "0x165A36" # v
 yellow =  "0x2A5C23" # v
 blue =    "0x001D42" # v
@@ -38,9 +38,82 @@ magenta = "0x9034B2" # v
 cyan =    "0x109EA8" # v
 white =   "0xC8C8B8" # v
 
+
+# [[colors.indexed_colors]]
+# index = 
+# color = 
+
+# dark gray (bright black)
 [[colors.indexed_colors]]
-index = 16
+index = 0x10
+color = "0x101010"
+# bright red
+[[colors.indexed_colors]]
+index = 0x11
+color = "0xFF4054"
+# bright green
+[[colors.indexed_colors]]
+index = 0x12
+color = "0x4BDD94"
+# bright "yellow" (aka yellowish green)
+[[colors.indexed_colors]]
+index = 0x13
+color = "0x9EDF6D"
+# bright blue
+[[colors.indexed_colors]]
+index = 0x14
+color = "0x72AFE3"
+# bright magenta
+[[colors.indexed_colors]]
+index = 0x15
+color = "0xFBADDD"
+# bright cyan
+[[colors.indexed_colors]]
+index = 0x16
+color = "0x65E7F1"
+# white white
+[[colors.indexed_colors]]
+index = 0x17
+color = "0xFFFFFF"
+
+# dark red
+[[colors.indexed_colors]]
+index = 0x21
+color = "0xB00010"
+# dark green
+[[colors.indexed_colors]]
+index = 0x22
+color = "0x165A36"
+# dark "yellow" (aka yellowish green)
+[[colors.indexed_colors]]
+index = 0x23
+color = "0x2A5C23"
+# dark blue
+[[colors.indexed_colors]]
+index = 0x24
+color = "0x001D42"
+# dark magenta / purple
+[[colors.indexed_colors]]
+index = 0x25
+color = "0x9034B2"
+# dark cyan
+[[colors.indexed_colors]]
+index = 0x26
+color = "0x109EA8"
+# "dark white"
+[[colors.indexed_colors]]
+index = 0x27
+color = "0xC8C8B8"
+
+# actual yellow
+[[colors.indexed_colors]]
+index = 0x32
 color = "0xE2C836"
+# very bright yellow
 [[colors.indexed_colors]]
-index = 17
-color = "0x7236E2"
+index = 0x33
+color = "0xF1EAA2"
+# somewhat light blue
+[[colors.indexed_colors]]
+index = 0x34
+color = "0x4C8FE6"

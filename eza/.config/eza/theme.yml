@@ -1,0 +1,177 @@
+# properties:
+#   foreground: Blue  
+#   background: null
+#   is_bold: false
+#   is_dimmed: false
+#   is_italic: false
+#   is_underline: false
+#   is_blink: false
+#   is_reverse: false
+#   is_hidden: false
+#   is_strikethrough: true
+#   prefix_with_reset: false
+
+define: &zx_permissions cyan
+define: &zx_size        38
+define: &zx_user        green
+define: &zx_timestamp   19
+# define: &zx_
+
+octal:
+  foreground: *zx_permissions
+  is_bold:    true
+  is_dimmed:  false
+
+size:
+  major:
+    foreground: *zx_size
+    is_bold:    false
+  minor:
+    foreground: *zx_size
+    is_bold:    false
+  number_byte:
+    foreground: *zx_size
+    is_bold:    false
+  number_kilo:
+    foreground: *zx_size
+    is_bold:    false
+  number_mega:
+    foreground: *zx_size
+    is_bold:    false
+  number_giga:
+    foreground: *zx_size
+    is_bold:    false
+  number_huge:
+    foreground: *zx_size
+    is_bold:    false
+  unit_byte:
+    foreground: *zx_size
+    is_bold:    false
+  unit_kilo:
+    foreground: *zx_size
+    is_bold:    false
+  unit_mega:
+    foreground: *zx_size
+    is_bold:    false
+  unit_giga:
+    foreground: *zx_size
+    is_bold:    false
+  unit_huge:
+    foreground: *zx_size
+    is_bold:    false
+
+users:
+  user_you:
+    foreground: *zx_user
+  user_root:
+    foreground: *zx_user
+  user_other:
+    foreground: *zx_user
+#   group_yours
+#   group_other
+#   group_root
+
+date:
+  foreground: *zx_timestamp
+
+filekinds:
+  normal:
+    foreground: 23
+  directory:
+    foreground: blue
+  symlink:
+    foreground: 21
+  pipe:
+    foreground: white
+  block_device:
+    foreground: white
+  char_device:
+    foreground: white
+  socket:
+    foreground: white
+  special:
+    foreground: white
+  executable:
+    foreground: 51
+  mount_point:
+    foreground: white
+
+links:
+  normal:
+    foreground: yellow
+  multi_link_file:
+    foreground: yellow
+
+# file_type:
+#   image
+#   video
+#   music
+#   crypto
+#   document
+#   compressed
+#   temp
+#   compiled
+#   build
+#   source
+
+# perms:
+#   user_read:
+#   user_write:
+#   user_executable_file:
+#   user_execute_other:
+#   group_read
+#   group_write
+#   group_execute
+#   other_read
+#   other_write
+#   other_execute
+#   special_user_file
+#   special_other
+#   attribute
+
+# git:
+#   new
+#   modified
+#   deleted
+#   renamed
+#   ignored
+#   conflicted
+
+# git_repo:
+#   branch_main
+#   branch_other
+#   git_clean
+#   git_dirty
+
+# security_context:
+#   none:
+#   selinux:
+#     colon
+#     user
+#     role
+#     typ
+#     range
+
+punctuation:
+  foreground: white
+  is_dimmed:  true
+
+# inode:
+#   foreground: magenta
+
+# blocks:
+  # foreground: magenta
+
+# header:
+
+# flags:
+#   foreground: magenta
+
+# control_char:
+#   foreground: magenta
+
+broken_symlink:
+  foreground: magenta
+
+broken_path_overlay:
+  foreground: magenta
