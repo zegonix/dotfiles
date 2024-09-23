@@ -1,7 +1,7 @@
 format = """
 \n\
-[╭─ ](bold)[⟨](bold zx_light_magenta)\
-$shell\
+[╭─ ](bold)[⟨](bold zx_light_magenta) \
+$shell \
 [//](bold zx_magenta)\
 $username\
 [//](bold zx_cyan)\
@@ -12,7 +12,7 @@ $git_branch[-](zx_light_magenta)$git_status\
 $jobs\
 [⟩ ](bold zx_dark_cyan)\
 $fill$status\
-\n[╰─](bold) 
+\n[╰─](bold) $python
 """
 
 # \n[╰─](bold zx_light_magenta) 
@@ -27,7 +27,7 @@ zx_green = "#0CB653"
 zx_light_green = "#4BDD94"
 zx_yellow = "#5EB34D"
 zx_light_yellow = "#9EDF6D"
-zx_blue = "#0E4081"
+zx_blue = "#2050A0"
 zx_light_blue = "#72AFE3"
 zx_magenta = "#E02482"
 zx_light_magenta = "#FBADDD"
@@ -107,5 +107,11 @@ style = 'bold zx_white'
 [shell]
 disabled = false
 style = "bold fg:zx_white"
-format = ' [\[](bold zx_gray)[$indicator]($style)[\]](bold zx_gray) '
+format = '[\[](bold zx_gray)[$indicator]($style)[\]](bold zx_gray)'
 bash_indicator = "bash"
+
+[python]
+disabled = false
+style = "bold fg:zx_blue"
+format = '[\(]($style) [$virtualenv](fg:zx_white) [\)]($style) '
+detect_extensions = []

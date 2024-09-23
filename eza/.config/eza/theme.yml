@@ -11,8 +11,8 @@
 #   is_strikethrough: true
 #   prefix_with_reset: false
 
-define: &zx_permissions cyan
-define: &zx_size        38
+define: &zx_permissions 21
+define: &zx_size        magenta
 define: &zx_user        green
 define: &zx_timestamp   19
 # define: &zx_
@@ -80,7 +80,7 @@ filekinds:
   directory:
     foreground: blue
   symlink:
-    foreground: 21
+    foreground: cyan
   pipe:
     foreground: white
   block_device:
