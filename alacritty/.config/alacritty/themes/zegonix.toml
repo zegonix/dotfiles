@@ -1,42 +1,42 @@
 [colors.primary]
-background = "0x202028"
-foreground = "0xD8D8D0"
-dim_foreground = "0xA0A0A0"
+background        = "0x0C0C18"
+foreground        = "0xD8D8D0"
+dim_foreground    = "0xA0A0A0"
 bright_foreground = "0xFFFFFF"
 
 [colors.cursor]
 cursor = "0xBBBBBB"
-text = "0x202830"
+text   = "0x202830"
 
 [colors.normal]
-black =   "0x000000" # v
-red =     "0xF00118" # v
-green =   "0x0CB653" # v
-yellow =  "0x5EB34D" # v
-blue =    "0x1F6DDB" # v
-magenta = "0xE02482" # v
-cyan =    "0x15D7E5" # v
-white =   "0xD8D8D0" # v
+black =   "0x181820"
+red =     "0xE00010"
+green =   "0x34AD1F"
+yellow =  "0xE1D719"
+blue =    "0x2B58D4"
+magenta = "0xE02482"
+cyan =    "0x15D7E5"
+white =   "0xE0E0D0"
 
 [colors.bright]
-black =   "0x101010" # v
-red =     "0xFF4054" # v
-green =   "0x4BDD94" # v
-yellow =  "0x9EDF6D" # v
-blue =    "0x72AFE3" # v
-magenta = "0xFBADDD" # v
-cyan =    "0x65E7F1" # v
-white =   "0xFFFFFF" # v
+black =   "0x2C2C3C"
+red =     "0xFF4054"
+green =   "0x51E740"
+yellow =  "0xF7F06E"
+blue =    "0x72AFE3"
+magenta = "0xFBADDD"
+cyan =    "0x65E7F1"
+white =   "0xFFFFFF"
 
 [colors.dim]
-black =   "0x000000" # v
-red =     "0xB00010" # v
-green =   "0x165A36" # v
-yellow =  "0x2A5C23" # v
-blue =    "0x001D42" # v
-magenta = "0x9034B2" # v
-cyan =    "0x109EA8" # v
-white =   "0xC8C8B8" # v
+black =   "0x000000" 
+red =     "0xB00010" 
+green =   "0x165A36" 
+yellow =  "0xA5910D" 
+blue =    "0x001D42" 
+magenta = "0x9034B2" 
+cyan =    "0x109EA8" 
+white =   "0xC8C8B8" 
 
 
 # [[colors.indexed_colors]]
@@ -46,7 +46,7 @@ white =   "0xC8C8B8" # v
 # dark gray (bright black)
 [[colors.indexed_colors]]
 index = 0x10
-color = "0x101010"
+color = "0x2C2C3C"
 # bright red
 [[colors.indexed_colors]]
 index = 0x11
@@ -54,11 +54,11 @@ color = "0xFF4054"
 # bright green
 [[colors.indexed_colors]]
 index = 0x12
-color = "0x4BDD94"
+color = "0x51E740"
 # bright "yellow" (aka yellowish green)
 [[colors.indexed_colors]]
 index = 0x13
-color = "0x9EDF6D"
+color = "0xF7F06E"
 # bright blue
 [[colors.indexed_colors]]
 index = 0x14
@@ -105,15 +105,31 @@ color = "0x109EA8"
 index = 0x27
 color = "0xC8C8B8"
 
-# actual yellow
+# pastel blue (red'ish)
+[[colors.indexed_colors]]
+index = 0x30
+color = "0xA3BCF5"
+# pastel magenta
+[[colors.indexed_colors]]
+index = 0x31
+color = "0xD75B99"
+# pastel green yellow'ish
 [[colors.indexed_colors]]
 index = 0x32
-color = "0xE2C836"
-# very bright yellow
+color = "0x85c567"
+# pastel yellow
 [[colors.indexed_colors]]
 index = 0x33
 color = "0xF1EAA2"
-# somewhat light blue
+# pastel green blue'ish
 [[colors.indexed_colors]]
 index = 0x34
-color = "0x4C8FE6"
+color = "0x81CFC6"
+# pastel cyan
+[[colors.indexed_colors]]
+index = 0x35
+color = "0x3ea389"
+# pastel orange
+[[colors.indexed_colors]]
+index = 0x36
+color = "0xE0BA85"
