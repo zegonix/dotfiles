@@ -43,93 +43,59 @@ white =   "0xC8C8B8"
 # index = 
 # color = 
 
-# dark gray (bright black)
-[[colors.indexed_colors]]
-index = 0x10
-color = "0x2C2C3C"
-# bright red
-[[colors.indexed_colors]]
-index = 0x11
-color = "0xFF4054"
-# bright green
-[[colors.indexed_colors]]
-index = 0x12
-color = "0x51E740"
-# bright "yellow" (aka yellowish green)
-[[colors.indexed_colors]]
-index = 0x13
-color = "0xF7F06E"
-# bright blue
-[[colors.indexed_colors]]
-index = 0x14
-color = "0x72AFE3"
-# bright magenta
-[[colors.indexed_colors]]
-index = 0x15
-color = "0xFBADDD"
-# bright cyan
-[[colors.indexed_colors]]
-index = 0x16
-color = "0x65E7F1"
-# white white
-[[colors.indexed_colors]]
-index = 0x17
-color = "0xFFFFFF"
-
-# dark red
-[[colors.indexed_colors]]
-index = 0x21
-color = "0xB00010"
-# dark green
-[[colors.indexed_colors]]
-index = 0x22
-color = "0x165A36"
-# dark "yellow" (aka yellowish green)
-[[colors.indexed_colors]]
-index = 0x23
-color = "0x2A5C23"
-# dark blue
-[[colors.indexed_colors]]
-index = 0x24
-color = "0x001D42"
-# dark magenta / purple
-[[colors.indexed_colors]]
-index = 0x25
-color = "0x9034B2"
-# dark cyan
-[[colors.indexed_colors]]
-index = 0x26
-color = "0x109EA8"
-# "dark white"
-[[colors.indexed_colors]]
-index = 0x27
-color = "0xC8C8B8"
-
 # pastel blue (red'ish)
 [[colors.indexed_colors]]
-index = 0x30
+index = 0x10
 color = "0xA3BCF5"
 # pastel magenta
 [[colors.indexed_colors]]
-index = 0x31
+index = 0x11
 color = "0xD75B99"
 # pastel green yellow'ish
 [[colors.indexed_colors]]
-index = 0x32
+index = 0x12
 color = "0x85c567"
 # pastel yellow
 [[colors.indexed_colors]]
-index = 0x33
+index = 0x13
 color = "0xF1EAA2"
 # pastel green blue'ish
 [[colors.indexed_colors]]
-index = 0x34
+index = 0x14
 color = "0x81CFC6"
 # pastel cyan
 [[colors.indexed_colors]]
-index = 0x35
+index = 0x15
 color = "0x3ea389"
 # pastel orange
 [[colors.indexed_colors]]
-index = 0x36
+index = 0x16
 color = "0xE0BA85"
+
+## shades of grey
+[[colors.indexed_colors]]
+index = 0x18
+color = "0x181818"
+[[colors.indexed_colors]]
+index = 0x19
+color = "0x383838"
+[[colors.indexed_colors]]
+index = 0x1A
+color = "0x585858"
+[[colors.indexed_colors]]
+index = 0x1B
+color = "0x787878"
+[[colors.indexed_colors]]
+index = 0x1C
+color = "0x989898"
+[[colors.indexed_colors]]
+index = 0x1D
+color = "0xB8B8B8"
+[[colors.indexed_colors]]
+index = 0x1E
+color = "0xD8D8D8"
+
+# dark red
+[[colors.indexed_colors]]
+index = 0x20
+color = "0xC00008"

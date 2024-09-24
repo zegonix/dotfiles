@@ -11,10 +11,10 @@
 #   is_strikethrough: true
 #   prefix_with_reset: false
 
-define: &zx_permissions 21
-define: &zx_size        49
-define: &zx_user        48
-define: &zx_timestamp   22
+define: &zx_permissions 15
+define: &zx_size        16
+define: &zx_user        27
+define: &zx_timestamp   29
 # define: &zx_
 
 octal:
@@ -79,11 +79,11 @@ date:
 
 filekinds:
   normal:
-    foreground: white
+    foreground: 15
   directory:
-    foreground: 50
+    foreground: blue
   symlink:
-    foreground: 53
+    foreground: cyan
   pipe:
     foreground: white
   block_device:
@@ -95,7 +95,8 @@ filekinds:
   special:
     foreground: white
   executable:
-    foreground: 51
+    foreground: green
+    is_bold:    true
   mount_point:
     foreground: 54
 
@@ -107,18 +108,21 @@ links:
 
 file_type:
   image:
-    foreground: 21
+    foreground: 17
   video:
-    foreground: 21
+    foreground: 17
 #   music
 #   crypto
 #   document
   compressed:
-    foreground: 49
+    foreground: magenta
 #   temp
-#   compiled
-#   build
-#   source
+  compiled:
+    foreground: 19
+  build:
+    foreground: 11
+  source:
+    foreground: 12
 
 # perms:
 #   user_read:
@@ -177,7 +181,7 @@ punctuation:
 #   foreground: magenta
 
 broken_symlink:
-  foreground: magenta
+  foreground: 32
 
 broken_path_overlay:
-  foreground: magenta
+  foreground: 32
