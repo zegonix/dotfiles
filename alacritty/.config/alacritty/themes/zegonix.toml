@@ -54,7 +54,7 @@ color = "0xD75B99"
 # pastel green yellow'ish
 [[colors.indexed_colors]]
 index = 0x12
-color = "0x85c567"
+color = "0x85C567"
 # pastel yellow
 [[colors.indexed_colors]]
 index = 0x13
@@ -66,7 +66,7 @@ color = "0x81CFC6"
 # pastel cyan
 [[colors.indexed_colors]]
 index = 0x15
-color = "0x3ea389"
+color = "0x3EA389"
 # pastel orange
 [[colors.indexed_colors]]
 index = 0x16

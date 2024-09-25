@@ -10,6 +10,7 @@ A collection of configuration files meant to be used with GNU stow.
 * configure 'logind'
 * configure lock screen (probably i3lock)
 * 'fzf'??
+* neovim -.-
 
 
 ## Usage
@@ -24,6 +25,7 @@ A collection of configuration files meant to be used with GNU stow.
 * feh
 * firefox
 * git
+* maim
 * man
 * pavucontrol
 * picom
@@ -33,6 +35,10 @@ A collection of configuration files meant to be used with GNU stow.
 * starship
 * stow
 * unzip
+* xclip
+
+AUR:
+* paru
 * visual-studio-code-bin
 
 

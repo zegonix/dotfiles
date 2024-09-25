@@ -5,13 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# functions
-show256colors () {
-    for code in {0..255}; do
-        echo -e "\e[38;05;${code}m $code: Color";
-    done
-}
-
 alias ls='ls -hal --color=auto'
 alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
 # alias list='lsd -lA'
@@ -31,3 +24,7 @@ eval "$(starship init bash)"
 
 # setup qmk completion
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
+
+# custom functions for specific purposes
+source ~/collection/commands/colors.sh
+source ~/collection/commands/dunst.sh
