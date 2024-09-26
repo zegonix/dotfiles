@@ -24,10 +24,10 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 250 400
 
     # The maximum height of a single notification, excluding the frame.
-    height = 180
+    height = 200
 
     # Position the notification in the top right corner
     origin = top-right
@@ -89,7 +89,7 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#85C567"
+    frame_color = "#8AD577"
 
     # Define a color for the separator.
     # possible values are:
@@ -97,7 +97,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = "#85C567"
+    separator_color = "#8AD577"
 
     # Sort messages by urgency.
     sort = no
@@ -293,14 +293,14 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#0C0C18E2"
-    foreground = "#85C567"
+    foreground = "#8AD577"
     timeout = 8
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
     background = "#0C0C18E2"
-    foreground = "#85C567"
+    foreground = "#8AD577"
     timeout = 8
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
