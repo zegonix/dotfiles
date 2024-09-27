@@ -33,4 +33,9 @@
     "editor.inlayHints.fontFamily": "'VictorMono Nerd Font'",
     "terminal.integrated.fontFamily": "'Victor Mono SemiBold'",
     "terminal.integrated.fontSize": 16,
+    "cortex-debug.liveWatchRefreshRate": 400,
+    "cortex-debug.stutilPath": "/usr/bin/st-util",
+    "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
+    "pdf-preview.default.sidebar": true,
+    "workbench.tree.indent": 20
 }
