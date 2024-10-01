@@ -12,10 +12,9 @@ $git_branch[-](zx_light_magenta)$git_status\
 $jobs\
 [⟩ ](bold zx_dark_cyan)\
 $fill$status\
-\n[╰─](bold) $python
+\n[╰─](bold) $python\ 
 """
 
-# \n[╰─](bold zx_light_magenta) 
 # Disable the blank line at the start of the prompt
 add_newline = false
 
@@ -96,7 +95,7 @@ use_12hr = false
 [status]
 disabled = false
 style = "fg:zx_white"
-format = ' [\[](bold fg:zx_green)[$symbol]($style)[\]](bold zx_green) '
+format = ' [\[](bold fg:zx_green)[$symbol]($style)[\]](bold zx_green)'
 symbol = '[err](bold)'
 success_symbol = '[ok](bold)'
 
