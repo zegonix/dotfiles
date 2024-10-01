@@ -1,0 +1,7 @@
+#
+# ~/.bash_alias
+#
+
+# xilinx specific aliases
+alias petalinux-source='source ~/repos/docker-petalinux2/etc/petalin2.sh'
+alias xilinx-vivado-source='source ~/tools/Xilinx/Vivado/2021.1/settings64.sh'

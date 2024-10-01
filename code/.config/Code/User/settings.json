@@ -36,6 +36,7 @@
     "cortex-debug.liveWatchRefreshRate": 400,
     "cortex-debug.stutilPath": "/usr/bin/st-util",
     "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
+    "cortex-debug.JLinkGDBServerPath": "/home/scbj/repos/jlink_linux/JLinkGDBServer",
     "pdf-preview.default.sidebar": true,
     "workbench.tree.indent": 20
 }

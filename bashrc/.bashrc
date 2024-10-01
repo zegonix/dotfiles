@@ -19,6 +19,9 @@ PS1='[\u@\h \W]\$ '
 # overwrite $TERM to avoid problems when connecting to devices via ssh
 export TERM="xterm-256color"
 
+# extend PATH variable
+# export PATH=$PATH:~/path/to/add
+
 # setup starship
 eval "$(starship init bash)"
 
@@ -28,3 +31,6 @@ eval "$(starship init bash)"
 # custom functions for specific purposes
 source ~/collection/commands/colors.sh
 source ~/collection/commands/dunst.sh
+
+# source alias file
+source ~/.bash_alias
