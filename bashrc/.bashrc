@@ -14,6 +14,8 @@ alias rg='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
 
 alias nano='nano -l'
 
+alias dirs='dirs -v'
+
 PS1='[\u@\h \W]\$ '
 
 # overwrite $TERM to avoid problems when connecting to devices via ssh

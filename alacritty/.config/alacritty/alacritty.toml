@@ -1,6 +1,10 @@
 import = ["~/.config/alacritty/themes/zegonix.toml"]
 # import = ["~/.config/alacritty/themes/summer.toml"]
 
+[window]
+padding = { x = 2, y = 0 }
+dynamic_padding = false
+
 # history configuration
 [scrolling]
 history = 100000
