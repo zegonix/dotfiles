@@ -5,11 +5,12 @@ A collection of configuration files meant to be used with GNU stow.
 
 ## Todos
 
+* tmux
 * configure 'pavucontrol' and 'blueman-manager' to use a dark theme
-* configure 'logind'
+* configure screen locker
 * configure lock screen (probably i3lock)
-* 'fzf'??
-* neovim -.-
+* fzf
+* neovim
 
 
 ## Usage
