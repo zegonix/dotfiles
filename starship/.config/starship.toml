@@ -51,7 +51,7 @@ disabled = false
 style = "fg:zx_white"
 format = "[ $path ]($style)"
 truncation_length = 6
-truncation_symbol = ""
+truncation_symbol = "../"
 truncate_to_repo = false
 
 [git_branch]
@@ -60,7 +60,7 @@ symbol = ""
 style = "fg:zx_white"
 format = '[ $symbol $branch ]($style)'
 truncation_length = 16
-truncation_symbol = ''
+truncation_symbol = ">"
 
 [git_status]
 disabled = false
@@ -108,7 +108,7 @@ style = 'bold zx_white'
 
 [shell]
 disabled = false
-style = "bold fg:zx_white"
+style = "fg:zx_white"
 format = '[\[](bold zx_gray)[$indicator]($style)[\]](bold zx_gray)'
 bash_indicator = "bash"
 
