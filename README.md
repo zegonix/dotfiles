@@ -19,12 +19,14 @@ A collection of configuration files meant to be used with GNU stow.
 * alacritty
 * audacious
 * bash-completion
+* bat
 * bitwarden
 * dunst
 * eza
 * feh
 * firefox
 * git
+* ly
 * maim
 * man
 * pavucontrol
@@ -34,6 +36,7 @@ A collection of configuration files meant to be used with GNU stow.
 * rofi
 * starship
 * stow
+* tmux
 * unzip
 * xclip
 
