@@ -5,9 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# unbind shortcuts with ctrl+vim-bindings for navigation in tmux
+bind -r "\C-h"
+bind -r "\C-j"
+bind -r "\C-k"
+bind -r "\C-l"
+
+# define aliases
 alias ls='ls -hal --color=auto'
 alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
-# alias list='lsd -lA'
 
 alias grep='grep --color=auto'
 alias rg='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
