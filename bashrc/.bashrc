@@ -6,10 +6,10 @@
 [[ $- != *i* ]] && return
 
 # unbind shortcuts with ctrl+vim-bindings for navigation in tmux
-bind -r "\C-h"
-bind -r "\C-j"
-bind -r "\C-k"
-bind -r "\C-l"
+#bind -r "\C-h"
+#bind -r "\C-j"
+#bind -r "\C-k"
+#bind -r "\C-l"
 
 # define aliases
 alias ls='ls -hal --color=auto'
