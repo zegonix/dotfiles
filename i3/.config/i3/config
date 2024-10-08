@@ -23,7 +23,7 @@ font pango:VictorMonoNerdFont SemiBold 12
 ###################################
 
 # start compositor and polybar, etc.
-exec --no-startup-id picom
+exec --no-startup-id picom -b
 
 # clean up and start polybar
 exec_always --no-startup-id killall polybar
