@@ -56,7 +56,7 @@ truncate_to_repo = false
 
 [git_branch]
 disabled = false
-symbol = ""
+symbol = ""
 style = "fg:zx_white"
 format = '[ $symbol $branch ]($style)'
 truncation_length = 16
