@@ -83,7 +83,7 @@ typechanged = ''
 disabled = false
 symbol_threshold = 0
 number_threshold = 1
-symbol = '󰁀 '
+symbol = '#'
 style = 'bold fg:zx_white'
 format ="[ $symbol$number ]($style)"
 
@@ -115,7 +115,7 @@ bash_indicator = "bash"
 [python]
 disabled = false
 symbol = ' '
-style = "bold fg:zx_pastel_yellow"
+style = "fg:zx_pastel_yellow"
 format = '[$symbol$version ]($style)'
 detect_extensions = []
 detect_files = []
