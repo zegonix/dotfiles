@@ -22,6 +22,9 @@ alias nano='nano -l'
 
 alias dirs='dirs -v'
 
+alias trw='tmux rename-window'
+
+# promt config, is overwritten by starship
 PS1='[\u@\h \W]\$ '
 
 # overwrite $TERM to avoid problems when connecting to devices via ssh
