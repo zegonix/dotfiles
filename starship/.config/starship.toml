@@ -1,16 +1,14 @@
 format = """
 \n\
-[╭─ ](bold)[⟨](bold zx_light_magenta) \
-$shell \
-[//](bold zx_magenta)\
+[╭─ ](bold)[⟨](bold zx_light_magenta)\
 $username\
-[//](bold zx_cyan)\
+[//](bold zx_magenta)\
 $directory\
-[//](bold zx_yellow)\
+[//](bold zx_cyan)\
 $git_branch[-](zx_light_magenta)$git_status\
-[//](bold zx_light_yellow)\
+[//](bold zx_yellow)\
 $jobs\
-[⟩ ](bold zx_dark_cyan)\
+[⟩ ](bold zx_light_yellow)\
 $fill$status\
 \n[╰─](bold) $python\ 
 """
@@ -24,7 +22,7 @@ palette = 'zegonix'
 [palettes.zegonix]
 zx_green = "#0CB653"
 zx_light_green = "#4BDD94"
-zx_yellow = "#5EB34D"
+zx_yellow = "#4EA33D"
 zx_light_yellow = "#8CDF5A"
 zx_blue = "#2050A0"
 zx_light_blue = "#72AFE3"
@@ -43,7 +41,7 @@ zx_pastel_yellow = "#F1EAA2"
 disabled = false
 show_always = true
 style_user = "fg:zx_white"
-style_root = "fg:zx_white"
+style_root = "bold fg:zx_white"
 format = '[ $user ]($style)'
 
 [directory]
@@ -84,7 +82,7 @@ disabled = false
 symbol_threshold = 0
 number_threshold = 1
 symbol = '#'
-style = 'bold fg:zx_white'
+style = 'fg:zx_white'
 format ="[ $symbol$number ]($style)"
 
 
@@ -97,7 +95,7 @@ use_12hr = false
 [status]
 disabled = false
 style = "fg:zx_white"
-format = ' [\[](bold fg:zx_green)[$symbol]($style)[\]](bold zx_green)'
+format = ' [\[](bold fg:zx_dark_cyan)[$symbol]($style)[\]](bold zx_dark_cyan)'
 symbol = '[err](bold)'
 success_symbol = '[ok](bold)'
 
