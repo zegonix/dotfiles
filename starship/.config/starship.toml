@@ -48,7 +48,7 @@ format = '[ $user ]($style)'
 disabled = false
 style = "fg:zx_white"
 format = "[ $path ]($style)"
-truncation_length = 6
+truncation_length = 4
 truncation_symbol = "../"
 truncate_to_repo = false
 
@@ -95,9 +95,9 @@ use_12hr = false
 [status]
 disabled = false
 style = "fg:zx_white"
-format = ' [\[](bold fg:zx_dark_cyan)[$symbol]($style)[\]](bold zx_dark_cyan)'
-symbol = '[err](bold)'
-success_symbol = '[ok](bold)'
+format = ' $symbol'
+symbol = '[\[](bold fg:zx_pastel_yellow)[err](bold)[\]](bold fg:zx_pastel_yellow)'
+success_symbol = '[\[](bold fg:zx_dark_cyan)[ok](bold)[\]](bold fg:zx_dark_cyan)'
 
 [fill]
 disabled = false
