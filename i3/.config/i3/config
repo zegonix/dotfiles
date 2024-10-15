@@ -188,7 +188,7 @@ mouse_warping none
 exec --no-startup-id feh --bg-fill ~/dotfiles/images/blaa.jpg
 
 # window border style
-default_border pixel 2
+default_border pixel 0
 default_floating_border pixel 0
 for_window [class=".*"] border pixel 1
 
@@ -210,6 +210,5 @@ client.focused          $cyan    $back_focus  $text_focus  $cyan      $cyan
 client.focused_inactive $transp  $back_focus  $text_focus  $transp    $transp
 client.unfocused        $transp  $back_focus  $text_focus  $transp    $transp
 client.urgent           $transp  $back_focus  $text_focus  $transp    $transp
-client.placeholder      $transp  $back_focus  $text_focus  $transp    $transp
+client.background       $transp
 
-client.background       #ffffff
