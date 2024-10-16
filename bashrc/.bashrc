@@ -22,9 +22,10 @@ alias nano='nano -l'
 
 alias dirs='dirs -v'
 
-alias sbashrc='source ~/.bashrc'
+alias bashsource='source ~/.bashrc'
 
 ## short forms for tmux commands
+alias trs='tmux rename-session'
 alias trw='tmux rename-window'
 alias tnw='tmux new-window -c "#{pane_current_path}"'
 
