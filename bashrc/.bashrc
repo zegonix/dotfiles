@@ -22,7 +22,11 @@ alias nano='nano -l'
 
 alias dirs='dirs -v'
 
+alias sbashrc='source ~/.bashrc'
+
+## short forms for tmux commands
 alias trw='tmux rename-window'
+alias tnw='tmux new-window -c "#{pane_current_path}"'
 
 # promt config, is overwritten by starship
 PS1='[\u@\h \W]\$ '
