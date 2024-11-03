@@ -1,7 +1,6 @@
 // path="~/.config/Code/User
 {
     "editor.fontFamily": "'VictorMono Nerd Font'",
-    "editor.fontWeight": 500,
     "extensions.ignoreRecommendations": true,
     "workbench.startupEditor": "none",
     "git.openRepositoryInParentFolders": "never",
@@ -19,7 +18,7 @@
     "editor.minimap.renderCharacters": false,
     "update.showReleaseNotes": false,
     "editor.accessibilityPageSize": 100,
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "editor.stickyScroll.enabled": false,
     "files.associations": {
         "*.txt": "shellscript"

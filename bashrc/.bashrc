@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# disable duplicates in command history
+export HISTCONTROL=ignoreboth:erasedups
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

@@ -32,7 +32,7 @@ zx_cyan = "#15D7E5"
 zx_light_cyan = "#65E7F1"
 zx_dark_cyan = "#109EA8"
 zx_white = "#DFDFD0"
-zx_gray = "#808078"
+zx_grey = "#808078"
 zx_pastel_yellow = "#F1EAA2"
 
 # You can also replace your username with a neat symbol like   or disable this
@@ -97,7 +97,7 @@ disabled = false
 style = "fg:zx_white"
 format = ' $symbol'
 symbol = '[\[](bold fg:zx_pastel_yellow)[err](bold)[\]](bold fg:zx_pastel_yellow)'
-success_symbol = '[\[](bold fg:zx_dark_cyan)[ok](bold)[\]](bold fg:zx_dark_cyan)'
+success_symbol = '[\[](bold fg:zx_grey)[ok](bold)[\]](bold fg:zx_grey)'
 
 [fill]
 disabled = false
