@@ -28,6 +28,7 @@ alias dirs='dirs -v'
 alias bashsource='source ~/.bashrc'
 
 ## short forms for tmux commands
+alias tma='tmux attach'
 alias trs='tmux rename-session'
 alias trw='tmux rename-window'
 alias tnw='tmux new-window -c "#{pane_current_path}"'
@@ -49,8 +50,9 @@ eval "$(starship init bash)"
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
 
 # custom functions for specific purposes
-source ~/collection/commands/colors.sh
-source ~/collection/commands/dunst.sh
+script_path=~/dotfiles/misc/scripts/
+source "${script_path}"/colors.sh
+source "${script_path}"/dunst.sh
 
 # source alias file
 source ~/.bash_alias

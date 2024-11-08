@@ -37,5 +37,6 @@
     "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
     "cortex-debug.JLinkGDBServerPath": "/home/scbj/repos/jlink_linux/JLinkGDBServer",
     "pdf-preview.default.sidebar": true,
-    "workbench.tree.indent": 20
+    "workbench.tree.indent": 20,
+    "cortex-debug.enableTelemetry": false
 }
