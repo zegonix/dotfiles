@@ -41,7 +41,6 @@ export TERM="xterm-256color"
 
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
-export PATH="${PATH}:~/dotfiles/misc/scripts/"
 
 # setup starship
 eval "$(starship init bash)"
@@ -56,3 +55,10 @@ source "${script_path}"/dunst.sh
 
 # source alias file
 source ~/.bash_alias
+
+
+# source cargo if available
+cargo_env="~/.cargo/env"
+if [ -f "${cargo_env}" ]; then
+    source "${cargo_env}"
+fi
