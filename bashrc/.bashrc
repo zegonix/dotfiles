@@ -41,6 +41,7 @@ export TERM="xterm-256color"
 
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
+export PATH=$PATH:$HOME/dotfiles/misc/scripts/
 
 # setup starship
 eval "$(starship init bash)"

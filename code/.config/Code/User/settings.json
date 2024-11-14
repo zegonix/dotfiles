@@ -38,5 +38,16 @@
     "cortex-debug.JLinkGDBServerPath": "/home/scbj/repos/jlink_linux/JLinkGDBServer",
     "pdf-preview.default.sidebar": true,
     "workbench.tree.indent": 20,
-    "cortex-debug.enableTelemetry": false
+    "cortex-debug.enableTelemetry": false,
+    "rust-analyzer.lens.debug.enable": false,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.lens.implementations.enable": false,
+    "rust-analyzer.lens.run.enable": false,
+    "rust-analyzer.diagnostics.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.genericParameterHints.const.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false
 }
