@@ -29,6 +29,8 @@ alias bashsource='source ~/.bashrc'
 
 ## short forms for tmux commands
 alias tma='tmux attach'
+alias tmd='tmux detach -P'
+
 alias trs='tmux rename-session'
 alias trw='tmux rename-window'
 alias tnw='tmux new-window -c "#{pane_current_path}"'
@@ -41,7 +43,9 @@ export TERM="xterm-256color"
 
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
-export PATH=$PATH:$HOME/dotfiles/misc/scripts/
+if [[ "$PATH" != *"dotfiles/misc/scripts/"* ]]; then
+    export PATH=$PATH:$HOME/dotfiles/misc/scripts/;
+fi
 
 # setup starship
 eval "$(starship init bash)"
@@ -59,7 +63,4 @@ source ~/.bash_alias
 
 
 # source cargo if available
-cargo_env="~/.cargo/env"
-if [ -f "${cargo_env}" ]; then
-    source "${cargo_env}"
-fi
+source "$HOME/.cargo/env"
