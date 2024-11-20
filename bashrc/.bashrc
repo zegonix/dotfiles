@@ -50,17 +50,27 @@ fi
 # setup starship
 eval "$(starship init bash)"
 
-# setup qmk completion
-# source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
 
-# custom functions for specific purposes
-script_path=~/dotfiles/misc/scripts/
-source "${script_path}"/colors.sh
-source "${script_path}"/dunst.sh
+# source shell scripts
+source_list=( )
 
-# source alias file
+## source alias file
 source ~/.bash_alias
 
+## source custom functions for specific purposes
+script_path=${HOME}/dotfiles/misc/scripts/
+source_list+="${script_path}/colors.sh"
+source_list+="${script_path}/dunst.sh"
 
-# source cargo if available
-source "$HOME/.cargo/env"
+## source qmk setup script
+# source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
+
+## source cargo setup script
+files_to_source="$HOME/.cargo/env"
+
+for script in source_list; do
+    if [[ -f script ]]; then
+        source script
+    fi
+done
+
