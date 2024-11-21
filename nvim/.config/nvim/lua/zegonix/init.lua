@@ -1,1 +1,3 @@
-require("zegonix.remap")
+require("zegonix.keybindings")
+require("zegonix.settings")
+

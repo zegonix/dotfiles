@@ -61,7 +61,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-
+bindsym $mod+t exec "alacritty -e tmux attach"
 # kill focused window
 bindsym $mod+Shift+q kill
 
