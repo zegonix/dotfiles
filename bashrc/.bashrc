@@ -59,18 +59,19 @@ source ~/.bash_alias
 
 ## source custom functions for specific purposes
 script_path=${HOME}/dotfiles/misc/scripts/
-source_list+="${script_path}/colors.sh"
-source_list+="${script_path}/dunst.sh"
+source_list=( )
+source_list+=( "${script_path}/colors.sh" )
+source_list+=( "${script_path}/dunst.sh" )
 
 ## source qmk setup script
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
 
 ## source cargo setup script
-source_list+="$HOME/.cargo/env"
+source_list+=( "$HOME/.cargo/env" )
 
-for script in source_list; do
-    if [[ -f script ]]; then
-        source script
+for script in ${source_list[@]}; do
+    if [[ -f ${script} ]]; then
+        source ${script}
     fi
 done
 
