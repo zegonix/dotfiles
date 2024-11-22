@@ -66,7 +66,7 @@ source_list+="${script_path}/dunst.sh"
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
 
 ## source cargo setup script
-files_to_source="$HOME/.cargo/env"
+source_list+="$HOME/.cargo/env"
 
 for script in source_list; do
     if [[ -f script ]]; then
