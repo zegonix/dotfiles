@@ -51,5 +51,6 @@
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "rust-analyzer.inlayHints.genericParameterHints.type.enable": true,
     "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
-    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
+    "rust-analyzer.check.command": "clippy"
 }
