@@ -2,7 +2,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
-		-- Adapted from: https://github.com/nvim-lualine/lualine.nvim/blob/master/lua/lualine/themes/onedark.lua
+		-- adapted from zegonix' alacritty theme, apart from the grays, which have been copied from wegmanma's config
 		local colors = {
 			black = "#181820",
 			red = "#E00010",
