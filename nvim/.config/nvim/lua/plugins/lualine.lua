@@ -15,7 +15,7 @@ return {
 			white = "#E0E0E0",
 			dim_black = "#2C2C3C",
 			dim_red = "#FF4054",
-			dim_green = "#51E740",
+			dim_green = "#6CC868",
 			dim_yellow = "#E8DC80",
 			dim_blue = "#709FE3",
 			dim_magenta = "#FBB0DD",
@@ -24,14 +24,14 @@ return {
 			fg = "#E0E0E0",
 			bg = "#181820",
 			gray1 = "#54546D",
-			gray2 = "#2A2A37",
-			gray3 = "#363646",
+			gray2 = "#343446",
+			gray3 = "#2A2A37",
 		}
 
 		local kanagawa_paper = {
 			normal = {
 				a = { fg = colors.bg, bg = colors.dim_red, gui = "bold" },
-				b = { fg = colors.fg, bg = colors.gray3 },
+				b = { fg = colors.fg, bg = colors.gray2 },
 				c = { fg = colors.fg, bg = colors.bg },
 			},
 			command = { a = { fg = colors.bg, bg = colors.yellow, gui = "bold" } },
@@ -42,25 +42,25 @@ return {
 			inactive = {
 				a = { fg = colors.gray1, bg = colors.bg, gui = "bold" },
 				b = { fg = colors.gray1, bg = colors.bg },
-				c = { fg = colors.gray1, bg = colors.gray2 },
+				c = { fg = colors.gray1, bg = colors.gray3 },
 			},
 		}
 
 		local mama_mia = {
 			normal = {
 				a = { fg = colors.bg, bg = colors.dim_blue, gui = "bold" },
-				b = { fg = colors.fg, bg = colors.gray3 },
-				c = { fg = colors.fg, bg = colors.bg },
+				b = { fg = colors.fg, bg = colors.gray1 },
+				c = { fg = colors.fg, bg = colors.gray3 },
 			},
 			command = { a = { fg = colors.bg, bg = colors.dim_yellow, gui = "bold" } },
 			insert = { a = { fg = colors.bg, bg = colors.dim_magenta, gui = "bold" } },
 			visual = { a = { fg = colors.bg, bg = colors.dim_cyan, gui = "bold" } },
-			terminal = { a = { fg = colors.bg, bg = colors.cyan, gui = "bold" } },
-			replace = { a = { fg = colors.bg, bg = colors.red1, gui = "bold" } },
+			terminal = { a = { fg = colors.bg, bg = colors.dim_green, gui = "bold" } },
+			replace = { a = { fg = colors.bg, bg = colors.dim_red, gui = "bold" } },
 			inactive = {
-				a = { fg = colors.gray1, bg = colors.bg, gui = "bold" },
-				b = { fg = colors.gray1, bg = colors.bg },
-				c = { fg = colors.gray1, bg = colors.gray2 },
+				a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
+				b = { fg = colors.fg, bg = colors.bg },
+				c = { fg = colors.fg, bg = colors.gray2 },
 			},
 		}
 
