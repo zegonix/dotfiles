@@ -26,7 +26,7 @@ return {
 				})
 			end,
 			keys = {
-				{ "<leader>e", ":Neotree toggle float<CR>", silent = true, desc = "Popup File Explorer" },
+				{ "<leader>e", ":Neotree toggle float<CR>", silent = true, desc = "Open NeoTree File [E]xplorer" },
 				--          { '<leader>e', ':Neotree toggle position=left<CR>', silent = true, desc = 'Left File Explorer' },
 				{
 					"<leader>gs",
