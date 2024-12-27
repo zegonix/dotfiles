@@ -13,7 +13,7 @@ size = 13.0
 
 [font.normal]
 family = "VictorMono Nerd Font"
-style = "Regular"
+style = "Medium"
 
 [font.bold]
 family = "VictorMono Nerd Font"
