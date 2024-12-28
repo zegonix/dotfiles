@@ -6,7 +6,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 # unbind shortcuts with ctrl+vim-bindings for navigation in tmux
 #bind -r "\C-h"
@@ -44,34 +44,32 @@ export TERM="xterm-256color"
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
 if [[ "$PATH" != *"dotfiles/misc/scripts/"* ]]; then
-    export PATH=$PATH:$HOME/dotfiles/misc/scripts/;
+    export PATH=$PATH:$HOME/dotfiles/misc/scripts/
 fi
 
 # setup starship
 eval "$(starship init bash)"
 
-
 # source shell scripts
-source_list=( )
+source_list=()
 
 ## source alias file
 source ~/.bash_alias
 
 ## source custom functions for specific purposes
 script_path=${HOME}/dotfiles/misc/scripts/
-source_list=( )
-source_list+=( "${script_path}/colors.sh" )
-source_list+=( "${script_path}/dunst.sh" )
+source_list=()
+source_list+=("${script_path}/colors.sh")
+source_list+=("${script_path}/dunst.sh")
 
 ## source qmk setup script
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
 
 ## source cargo setup script
-source_list+=( "$HOME/.cargo/env" )
+source_list+=("$HOME/.cargo/env")
 
 for script in ${source_list[@]}; do
     if [[ -f ${script} ]]; then
         source ${script}
     fi
 done
-
