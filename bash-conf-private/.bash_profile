@@ -2,4 +2,6 @@
 # ~/.bash_profile
 #
 
-source "~/.bashrc"
+if [[ -n "$USER" ]]; then
+    source "/home/$USER/.bashrc"
+fi
