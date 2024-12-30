@@ -4,11 +4,8 @@ SESSION='quak'
 # dont forget the '-d' option, otherwise the rest of
 # the commands will get executed after the session is closed
 tmux new-session -d -s "$SESSION" -n "temp"
-tmux new-window -t "$SESSION" -n "dotfiles"
-tmux send-keys -t "$SESSION" "cd ~/dotfiles" C-m "clear" C-m
-tmux new-window -t "$SESSION" -n "docs"
-tmux send-keys -t "$SESSION" "cd ~/collection" C-m "clear" C-m
-tmux new-window -t "$SESSION" -n "stuff"
-tmux send-keys -t "$SESSION" "cd ~" C-m "clear" C-m
+tmux new-window -t "$SESSION" -n "dotfiles" -c $HOME/dotfiles
+tmux new-window -t "$SESSION" -n "docs" -c $HOME/collection
+tmux new-window -t "$SESSION" -n "stuff" -c $HOME
 tmux kill-window -t "temp"
 tmux attach -t "$SESSION"
