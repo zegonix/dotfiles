@@ -27,7 +27,13 @@ alias dirs='dirs -v'
 
 alias bashsource='source ~/.bashrc'
 
-## short forms for tmux commands
+# short forms for tmux commands
+
+## run script to setup default tmux session and then attach the session
+## attaching the session needs to be done from the calling shell, otherwise
+## the setup script will only terminate after detaching or killing the session
+alias dmux='default-tmux-session && tmux attach'
+
 alias tma='tmux attach'
 alias tmd='tmux detach -P'
 

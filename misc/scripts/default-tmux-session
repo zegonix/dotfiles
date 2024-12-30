@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+SESSION='quak'
+# dont forget the '-d' option, otherwise the rest of
+# the commands will get executed after the session is closed
+
+if $(tmux has-session -t ${SESSION}); then
+    echo "default session ${SESSION} already exists"
+
+    # return 1 to report error and abort the `dmux` alias
+    return 1
+else
+    tmux new-session -d -s "$SESSION" -n "temp"
+    tmux new-window -t "$SESSION" -n "dotfiles" -c $HOME/dotfiles
+    tmux new-window -t "$SESSION" -n "docs" -c $HOME/collection
+    tmux new-window -t "$SESSION" -n "stuff" -c $HOME
+    tmux kill-window -t "temp"
+
+    # this causes the script to exit only, when the session is ended or detached
+    # it also causes the tmux detach command with hang up signal to fail
+    # therefore the following line is commented out and an alias setup in .bashrc
+    #tmux attach -t "$SESSION"
+fi
