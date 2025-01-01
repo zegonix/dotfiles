@@ -40,4 +40,7 @@ require("lazy").setup({
 	require("plugins.neo-tree"),
 	require("plugins.telescope"),
 	require("plugins.treesitter"),
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })
+
+vim.cmd.colorscheme("catppuccin-mocha")
