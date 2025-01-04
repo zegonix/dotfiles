@@ -15,9 +15,11 @@ if $(tmux has-session -t ${DEFAULT_SESSION} 2>/dev/null); then
 else
     # dont forget the '-d' option, otherwise the session is closed
     # before the rest of the commands are executed
-    tmux new-session -d -s "$DEFAULT_SESSION" -n "dotfiles" -c "$HOME/dotfiles"
+    tmux new-session -d -s "$DEFAULT_SESSION" -n "temp" -c "$HOME" # create dummy window to set default path for new windows
+    tmux new-window -t "$DEFAULT_SESSION" -n "dotfiles" -c "$HOME/dotfiles"
     tmux new-window -t "$DEFAULT_SESSION" -n "docs" -c "$HOME/collection"
     tmux new-window -t "$DEFAULT_SESSION" -n "stuff" -c "$HOME"
+    tmux kill-window -t "temp"
 
     # this causes the script to exit only, when the session is ended or detached
     # it also causes tmux's detach command with hang up signal to fail
