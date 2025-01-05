@@ -40,6 +40,7 @@ require("lazy").setup({
 	require("plugins.neo-tree"),
 	require("plugins.telescope"),
 	require("plugins.treesitter"),
+	require("plugins.vim-tmux-navigation"),
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })
 
