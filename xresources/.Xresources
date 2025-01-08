@@ -1,8 +1,0 @@
-
-! settings for `zutty`
-Zutty.altScroll: true
-
-Zutty.font: JetBrainsMonoNerdFont
-Zutty.bg: #0C0C18
-Zutty.fg: #D8D8D8
-
