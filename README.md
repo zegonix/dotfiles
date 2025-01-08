@@ -7,10 +7,12 @@ A collection of configuration files meant to be used with GNU stow.
 
 * fish (shell)
 * fzf
-* neovim
 * configure screen locker
 * configure lock screen (probably i3lock)
 * sway (wayland in general..)
+* terminal emulators to keep in mind:
+  * `contour`
+  * `foot` (wayland exclusive)
 
 
 ## Usage
