@@ -11,8 +11,8 @@ A collection of configuration files meant to be used with GNU stow.
 * configure lock screen (probably i3lock)
 * sway (wayland in general..)
 * terminal emulators to keep in mind:
-  * `contour`
   * `foot` (wayland exclusive)
+  * `zutty` very lightweight, does not support nerd fonts as of 2025-01-08
 
 
 ## Usage

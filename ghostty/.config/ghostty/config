@@ -2,5 +2,10 @@ window-decoration = false
 
 font-family = JetBrainsMono Nerd Font
 font-size = 14.0
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
 
+# transparency is handled by picom
 background-opacity = 1.0
+background = #0C0C18
