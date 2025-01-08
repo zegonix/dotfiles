@@ -11,11 +11,12 @@
 #   is_strikethrough: true
 #   prefix_with_reset: false
 
-define: &zx_permissions 15
-define: &zx_size        16
-define: &zx_user        27
-define: &zx_timestamp   29
-# define: &zx_
+define: &zx_permissions  "#E0E0E0"
+define: &zx_size         "#A3BCF5"
+define: &zx_user         "#748CE0"
+define: &zx_timestamp    "#808080"
+define: &zx_directories  "#6CA05C"
+define: &zx_test         "#F1EAA2"
 
 octal:
   foreground: *zx_permissions
@@ -81,7 +82,7 @@ filekinds:
   normal:
     foreground: 15
   directory:
-    foreground: blue
+    foreground: *zx_directories
   symlink:
     foreground: cyan
   pipe:
@@ -102,9 +103,9 @@ filekinds:
 
 links:
   normal:
-    foreground: 52
+    foreground: "#5F0087"
   multi_link_file:
-    foreground: 52
+    foreground: "5F0000"
 
 file_type:
   image:

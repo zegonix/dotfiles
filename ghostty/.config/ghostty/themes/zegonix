@@ -1,0 +1,31 @@
+
+background = #0C0C18
+foreground = #D0D0D0
+
+################
+# colors [0..15]
+# black
+# red
+# green
+# yellow
+# blue
+# magenta
+# cyan
+# white
+# .. in bright
+palette =  0=#181820
+palette =  1=#E00010
+palette =  2=#34AD1F
+palette =  3=#E1D719
+palette =  4=#2B58D4
+palette =  5=#E02482
+palette =  6=#15D7E5
+palette =  7=#D0D0D0
+palette =  8=#2C2C3C
+palette =  9=#FF4054
+palette = 10=#51E740
+palette = 11=#F7F06E
+palette = 12=#72AFE3
+palette = 13=#FBADDD
+palette = 14=#65E7F1
+palette = 15=#FFFFFF

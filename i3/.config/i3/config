@@ -75,8 +75,8 @@ bindsym $mod+d       exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+t exec "alacritty -e tmux attach"
+bindsym $mod+Return exec ghostty
+# bindsym $mod+t exec "alacritty -e tmux attach" # ghostty does not seem to support this yes
 
 # change focus
 bindsym $mod+h focus left
