@@ -22,13 +22,13 @@ return {
 		opts = {
 			win = {
 				border = {
-					{ "┌", "FloatBorder" },
+					{ "╭", "FloatBorder" },
 					{ "─", "FloatBorder" },
-					{ "┐", "FloatBorder" },
+					{ "╮", "FloatBorder" },
 					{ "│", "FloatBorder" },
-					{ "┘", "FloatBorder" },
+					{ "╯", "FloatBorder" },
 					{ "─", "FloatBorder" },
-					{ "└", "FloatBorder" },
+					{ "╰", "FloatBorder" },
 					{ "│", "FloatBorder" },
 				},
 			},

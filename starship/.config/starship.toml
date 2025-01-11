@@ -1,6 +1,6 @@
 format = """
 \n\
-[╭─ ](bold)[⟨](bold zx_light_magenta)\
+[╭─ ](bold fg:zx_white)[⟨](bold fg:zx_light_magenta)\
 $username\
 [//](bold zx_magenta)\
 $directory\
@@ -22,8 +22,8 @@ palette = 'zegonix'
 [palettes.zegonix]
 zx_green = "#0CB653"
 zx_light_green = "#4BDD94"
-zx_yellow = "#4EA33D"
-zx_light_yellow = "#8CDF5A"
+zx_yellow = "#4EA03D"
+zx_light_yellow = "#94E85A"
 zx_blue = "#2050A0"
 zx_light_blue = "#72AFE3"
 zx_magenta = "#E02482"

@@ -10,6 +10,5 @@ font-feature = -dlig
 background-opacity = 1.0
 
 selection-invert-fg-bg = true
-minimum-contrast = 2
 
 theme = zegonix
