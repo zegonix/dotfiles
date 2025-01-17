@@ -25,6 +25,8 @@ alias nano='nano -l'
 
 alias dirs='dirs -v'
 
+alias diff='diff --color=always'
+
 alias bashsource='source ~/.bashrc'
 
 # short forms for tmux commands
