@@ -1,5 +1,5 @@
 * {
-  font: "Victor Mono Nerd Font 13";
+  font: "JetBrains Mono Nerd Font 14";
 
   zx-transparent:       transparent;
   zx-white:             #C8C8C8FF;

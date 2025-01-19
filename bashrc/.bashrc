@@ -2,8 +2,13 @@
 # ~/.bashrc
 #
 
-# disable duplicates in command history
+# configure behaviour of command history
+## disable duplicates in command history
 export HISTCONTROL=ignoreboth:erasedups
+## increase history size
+history_size=2000
+export HISTSIZE=${history_size}
+export HISTFILESIZE=${history_size}
 
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
@@ -30,7 +35,6 @@ alias diff='diff --color=always'
 alias bashsource='source ~/.bashrc'
 
 # short forms for tmux commands
-
 ## run script to setup default tmux session and then attach the session
 ## attaching the session needs to be done from the calling shell, otherwise
 ## the setup script will only terminate after detaching or killing the session
@@ -55,11 +59,8 @@ if [[ "$PATH" != *"dotfiles/misc/scripts/"* ]]; then
     export PATH=$PATH:$HOME/dotfiles/misc/scripts/
 fi
 
-# setup starship
+# setup `starship`
 eval "$(starship init bash)"
-
-# source shell scripts
-source_list=()
 
 ## source alias file
 source ~/.bash_alias

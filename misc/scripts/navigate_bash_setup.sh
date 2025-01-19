@@ -5,18 +5,35 @@ __call_navigate() {
     eval "$(navigate ${arg_pid} $@)"
 }
 
-push() {
+function push {
     __call_navigate "push $@"
 }
 
-pop() {
+function pop {
     __call_navigate "pop $@"
 }
 
-stack() {
+function stack {
     __call_navigate "stack $@"
 }
 
-book() {
+function book {
     __call_navigate "bookmark $@"
 }
+
+# completion for `push`
+function _push {
+    CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}
+    DIRS="$(find . -maxdepth 1 -type d | grep -vx "." | grep -vx ".." | sed s^"./"^^)"
+    COMPREPLY=($(compgen -W "${DIRS}" -- $CURRENT_WORD))
+}
+
+# completion for `book`
+function _book {
+    CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}
+    BOOKMARKS="$(__call_navigate bookmark names)"
+    COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
+}
+
+complete -F _push push
+complete -F _book book

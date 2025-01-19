@@ -1,0 +1,2 @@
+
+alias test='eval $(fc -lnr 1 | fzf --tmux )'
