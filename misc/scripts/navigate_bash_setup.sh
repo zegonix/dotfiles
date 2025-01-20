@@ -21,13 +21,6 @@ function book {
     __call_navigate "bookmark $@"
 }
 
-# completion for `push`
-function _push {
-    CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}
-    DIRS="$(find . -maxdepth 1 -type d | grep -vx "." | grep -vx ".." | sed s^"./"^^)"
-    COMPREPLY=($(compgen -W "${DIRS}" -- $CURRENT_WORD))
-}
-
 # completion for `book`
 function _book {
     CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}
@@ -35,5 +28,5 @@ function _book {
     COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
 }
 
-complete -F _push push
+complete -o dirnames push
 complete -F _book book
