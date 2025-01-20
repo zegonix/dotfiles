@@ -1,2 +1,3 @@
 
-alias test='eval $(fc -lnr 1 | fzf --tmux )'
+alias search-history='eval $(fc -lnr 1 | fzf --tmux )'
+

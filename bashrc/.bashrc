@@ -69,6 +69,7 @@ source ~/.bash_alias
 script_path=${HOME}/dotfiles/misc/scripts/
 source_list=()
 source_list+=("${script_path}/navigate_bash_setup.sh")
+source_list+=("${script_path}/fzf-bash-history")
 source_list+=("${script_path}/colors.sh")
 source_list+=("${script_path}/dunst.sh")
 
@@ -83,3 +84,7 @@ for script in ${source_list[@]}; do
         source ${script}
     fi
 done
+
+if [[ -t 0 && $- = *i* ]]; then
+    stty -ixon
+fi
