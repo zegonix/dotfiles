@@ -45,6 +45,7 @@ alias tmd='tmux detach -P'
 
 alias trs='tmux rename-session'
 alias trw='tmux rename-window'
+alias tns='tmux new-session -d'
 alias tnw='tmux new-window -c "#{pane_current_path}"'
 
 # promt config, is overwritten by starship
