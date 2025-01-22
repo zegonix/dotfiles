@@ -1,6 +1,6 @@
 
 [window]
-padding = { x = 2, y = 0 }
+# padding = { x = 2, y = 0 }
 dynamic_padding = false
 
 # history configuration
@@ -9,22 +9,26 @@ history = 100000
 
 # font configuration
 [font]
-size = 13.0
+size = 14.0
 
 [font.normal]
-family = "VictorMono Nerd Font"
+# family = "VictorMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [font.bold]
-family = "VictorMono Nerd Font"
+# family = "VictorMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "VictorMono Nerd Font"
+# family = "VictorMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "SemiBoldItalic"
 
 [font.bold_italic]
-family = "VictorMono Nerd Font"
+# family = "VictorMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "BoldItalic"
 
 [general]
