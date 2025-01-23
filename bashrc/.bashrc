@@ -56,8 +56,8 @@ export TERM="xterm-256color"
 
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
-if [[ "$PATH" != *"dotfiles/misc/scripts/"* ]]; then
-    export PATH=$PATH:$HOME/dotfiles/misc/scripts/
+if [[ "$PATH" != *"dotfiles/scripts/"* ]]; then
+    export PATH=$PATH:$HOME/dotfiles/scripts/
 fi
 
 # setup `starship`
@@ -67,7 +67,7 @@ eval "$(starship init bash)"
 source ~/.bash_alias
 
 ## source custom functions for specific purposes
-script_path=${HOME}/dotfiles/misc/scripts/
+script_path=${HOME}/dotfiles/scripts/
 source_list=()
 source_list+=("${script_path}/navigate_bash_setup.sh")
 source_list+=("${script_path}/fzf-bash-history")
