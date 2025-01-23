@@ -69,7 +69,7 @@ source ~/.bash_alias
 ## source custom functions for specific purposes
 script_path=${HOME}/dotfiles/scripts/
 source_list=()
-source_list+=("${script_path}/navigate_bash_setup.sh")
+source_list+=("${script_path}/navigate_bash_setup")
 source_list+=("${script_path}/fzf-bash-history")
 source_list+=("${script_path}/colors.sh")
 source_list+=("${script_path}/dunst.sh")
