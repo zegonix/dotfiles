@@ -1,7 +1,7 @@
 format = """
 \n\
-[╭─ ](bold fg:zx_white)[⟨](bold fg:zx_light_magenta)\
-$username\
+[╭─ ](bold fg:zx_white)[⟨](bold fg:zx_light_magenta) \
+$hostname$username \
 [//](bold zx_magenta)\
 $directory\
 [//](bold zx_cyan)\
@@ -42,7 +42,16 @@ disabled = false
 show_always = true
 style_user = "fg:zx_white"
 style_root = "bold fg:zx_white"
-format = '[ $user ]($style)'
+format = '[$user]($style)'
+
+[hostname]
+disabled = false
+ssh_only = false
+trim_at = ''
+ssh_symbol = '󱘖'
+style = "bold fg:zx_white"
+format = "[$ssh_symbol ]($style)"
+
 
 [directory]
 disabled = false
