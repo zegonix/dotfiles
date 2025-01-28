@@ -2,13 +2,24 @@
 function __search-history {
     current_line="${READLINE_LINE}"
     if [[ -n $current_line ]]; then
-        command=$(fc -lnr 1 | fzf --scheme=history --tmux -q ${current_line})
+        command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right -q ${current_line}))
     else
-        command=$(fc -lnr 1 | fzf --scheme=history --tmux)
+        command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right))
     fi
-    command=$(echo $command | xargs)
+
+    # print command to terminal for editting
+    if [[ ${command[0]} = "tab" || ${command[0]} = "right" ]]; then
+        edit="true"
+        command=(${command[@]:1:${#command[@]}})
+    fi
+
+    # strip white space
+    command="${command[@]}"
     READLINE_LINE="${command}"
     READLINE_POINT=$(( 0 + ${#command} ))
+    if [[ -z ${edit} ]]; then
+        echo
+    fi
 }
 
 if command -v fzf 2>&1 >/dev/null; then
