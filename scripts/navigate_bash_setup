@@ -21,6 +21,10 @@ function book {
     __call_navigate "bookmark $@"
 }
 
+function navconfig {
+    __call_navigate "configuration $@"
+}
+
 # completion function for `book`
 function _book {
     CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}

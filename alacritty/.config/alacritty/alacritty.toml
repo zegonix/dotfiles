@@ -24,7 +24,7 @@ style = "Bold"
 [font.italic]
 # family = "VictorMono Nerd Font"
 family = "JetBrainsMono Nerd Font"
-style = "SemiBoldItalic"
+style = "Italic"
 
 [font.bold_italic]
 # family = "VictorMono Nerd Font"
