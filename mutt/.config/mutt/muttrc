@@ -1,0 +1,33 @@
+
+#
+# Useful link: https://wiki.archlinux.org/title/Mutt#Multiple_accounts
+#
+# Warning: When one account is setting a variable that is not
+# specified for other accounts, you must unset it for them, otherwise
+# configuration will overlap and you will most certainly experience
+# unexpected behaviour.
+#
+
+set editor = nvim
+
+# set sort = reverse-date-received
+
+# Threaded according to the most recent e-mail in a thread,
+# this should work:
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
+
+bind index G imap-fetch-mail
+
+# Ctrl U, Ctrl D to navigate inside pager (message body)
+bind generic,index,pager \Cf            next-page
+bind generic,index,pager \Cb            previous-page
+bind generic,index,pager \Cd            half-down
+bind generic,index,pager \Cu            half-up
+set pager_stop = yes
+
+set ssl_force_tls = "yes"
+set ssl_starttls  = "yes"
+
+source ./accounts
