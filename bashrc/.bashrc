@@ -10,6 +10,13 @@ history_size=2000
 export HISTSIZE=${history_size}
 export HISTFILESIZE=${history_size}
 
+# configure pagers
+export PAGER='less --use-color -R'
+
+if $(which nvim >/dev/null); then
+    export MANPAGER='nvim +Man!'
+fi
+
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
 

@@ -47,6 +47,7 @@ vim.o.timeoutlen = 1500
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.conceallevel = 0
+vim.o.fillchars = "vert:│,horiz:─"
 
 -- history settings
 vim.opt.list = true
