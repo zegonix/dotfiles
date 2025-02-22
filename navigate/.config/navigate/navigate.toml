@@ -4,8 +4,9 @@ show_stack_on_pop = false
 show_books_on_bookmark = false
 
 [format]
-stack_separator = " -  "
-bookmarks_separator = " -  "
+stack_separator = " = "
+bookmarks_separator = " = "
+stack_hide_numbers = false
 show_home_as_tilde = true
 align_separators = true
 

@@ -109,9 +109,9 @@ links:
 
 file_type:
   image:
-    foreground: 17
+    foreground: "#D75B99"
   video:
-    foreground: 17
+    foreground: "#D75B99"
 #   music
 #   crypto
 #   document
@@ -119,7 +119,7 @@ file_type:
     foreground: magenta
 #   temp
   compiled:
-    foreground: 19
+    foreground: "#F1EAA2"
   build:
     foreground: 11
   source:
@@ -182,7 +182,7 @@ punctuation:
 #   foreground: magenta
 
 broken_symlink:
-  foreground: 32
+  foreground: "#C00008"
 
 broken_path_overlay:
-  foreground: 32
+  foreground: "#C00008"
