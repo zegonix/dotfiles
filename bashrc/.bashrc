@@ -31,7 +31,7 @@ alias ls='ls -hal --color=auto'
 alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
 
 if $(which rg >/dev/null); then
-    alias grep='rg'
+    alias grep='rg --color=auto --no-ignore'
     alias gre='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
 else
     alias gre='grep --color=auto'
