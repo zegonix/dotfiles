@@ -1,18 +1,6 @@
 # dotfiles
 
-A collection of configuration files meant to be used with GNU stow.
-
-
-## Todos
-
-* fish (shell)
-* fzf
-* configure screen locker
-* configure lock screen (probably i3lock)
-* sway (wayland in general..)
-* terminal emulators to keep in mind:
-  * `foot` (wayland exclusive)
-  * `zutty` very lightweight, does not support nerd fonts as of 2025-01-08
+A collection of configuration files meant to be used with GNU stow, hence the directory structure.
 
 
 ## Usage
@@ -27,10 +15,13 @@ A collection of configuration files meant to be used with GNU stow.
 * eza
 * feh
 * firefox
+* fzf
 * git
 * ly
 * maim
 * man
+* neovim
+* pandoc
 * pavucontrol
 * picom
 * polybar
@@ -44,7 +35,6 @@ A collection of configuration files meant to be used with GNU stow.
 
 AUR:
 * paru
-* visual-studio-code-bin
 
 
 ### Getting the repository
@@ -73,3 +63,16 @@ for example
     stow alacritty
 ```
 It is important to execute this and similar commands in the root directory of the repository `~/dotfiles` unless you specify source and target locations manually.
+
+
+## Todos
+
+* fish (shell)
+* configure screen locker
+* configure lock screen (probably i3lock)
+* sway (wayland in general..)
+* terminal emulators to keep in mind:
+  * `foot` (wayland exclusive)
+  * `zutty` very lightweight, does not support nerd fonts as of 2025-01-08
+
+
