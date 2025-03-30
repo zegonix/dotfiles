@@ -69,6 +69,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Escape exec i3lock
 ## kill focused window
 bindsym $mod+Shift+q kill
+## start/kill compositor
+bindsym $mod+Shift+f exec --no-startup-id picom -b
+bindsym $mod+Shift+v exec pkill picom
 
 # start rofi (a program launcher with fuzzy finder functionality)
 bindsym $mod+d       exec --no-startup-id rofi -show combi
