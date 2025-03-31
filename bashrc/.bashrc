@@ -30,12 +30,13 @@ fi
 alias ls='ls -hal --color=auto'
 alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
 
-alias grep='grep --color=auto'
-alias rg='rg --no-ignore -i -n -A 1 -B 1 --color=auto -e'
+if $(which rg >/dev/null); then
+    alias grep='rg --color=always -n -e'
+else
+    alias grep='grep --color=always'
+fi
 
-alias nano='nano -l'
-
-alias dirs='dirs -v'
+alias rgi='rg -i -n -A 1 -B 1 --color=auto -e'
 
 alias diff='diff --color=always'
 
