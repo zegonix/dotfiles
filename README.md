@@ -6,7 +6,7 @@ A collection of configuration files meant to be used with GNU stow, hence the di
 ## Usage
 
 ### List of packages to install
-* alacritty
+* (alacritty)
 * audacious
 * bash-completion
 * bat
@@ -17,6 +17,7 @@ A collection of configuration files meant to be used with GNU stow, hence the di
 * firefox
 * fzf
 * git
+* ghostty
 * ly
 * maim
 * man

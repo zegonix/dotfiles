@@ -1,4 +1,4 @@
-window-decoration = false
+title = ghostty
 
 font-family = JetBrainsMono Nerd Font
 font-size = 16.0
@@ -10,5 +10,9 @@ font-feature = -dlig
 background-opacity = 1.0
 
 selection-invert-fg-bg = true
+
+window-decoration = none
+mouse-scroll-multiplier = 1.0
+copy-on-select = false
 
 theme = zegonix
