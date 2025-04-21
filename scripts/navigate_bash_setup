@@ -32,12 +32,12 @@ function _book {
         BOOKMARKS="add remove $(__call_navigate bookmark names)"
         COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
     elif [[ COMP_CWORD -eq 2 ]]; then
-        if [[ COMP_WORDS[1] = "remove" ]]; then
+        if [[ "${COMP_WORDS[1]}" = "remove" ]]; then
             BOOKMARKS="$(__call_navigate bookmark names)"
             COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
         fi
     elif [[ COMP_CWORD -eq 3 ]]; then
-        if [[ COMP_WORDS[1] = "add" ]]; then
+        if [[ "${COMP_WORDS[1]}" = "add" ]]; then
             COMPREPLY=($(compgen -o dirnames -- $CURRENT_WORD))
         fi
     fi
