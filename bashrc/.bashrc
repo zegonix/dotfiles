@@ -37,9 +37,12 @@ else
     alias grep='grep --color=always'
 fi
 
-alias diff='diff --color=always'
+alias cdiff='diff --color=always'
 
 alias bashsource='source ~/.bashrc'
+
+# for convenient opening of pdfs..
+alias firefox='librewolf'
 
 # short forms for tmux commands
 ## run script to setup default tmux session and then attach the session
