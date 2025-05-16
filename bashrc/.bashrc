@@ -50,6 +50,7 @@ alias firefox='librewolf'
 ## the setup script will only terminate after detaching or killing the session
 alias dmux='default-tmux-session && tmux attach'
 
+alias tks='tmux kill-session'
 alias tma='tmux attach'
 alias tmd='tmux detach -P'
 
