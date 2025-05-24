@@ -1,0 +1,10 @@
+[core]
+	editor = nvim
+[pull]
+	rebase = true
+[log]
+    date = iso-local
+; [format]
+;     pretty = format:%C(yellow)%h %C(auto)%d %C(reset)%s %C(cyan)%ad
+[include]
+    path = ~/.config/.gitconfig
