@@ -48,7 +48,7 @@ alias firefox='librewolf'
 ## run script to setup default tmux session and then attach the session
 ## attaching the session needs to be done from the calling shell, otherwise
 ## the setup script will only terminate after detaching or killing the session
-alias dmux='default-tmux-session && tmux attach'
+alias dmux='bash default-tmux-session.sh && tmux attach'
 
 alias tks='tmux kill-session'
 alias tma='tmux attach'
@@ -80,10 +80,11 @@ source ~/.bash_alias
 ## source custom functions for specific purposes
 script_path=${HOME}/dotfiles/scripts/
 source_list=()
-source_list+=("${script_path}/navigate_bash_setup")
-source_list+=("${script_path}/fzf-bash-history")
+source_list+=("${script_path}/navigate_bash_setup.sh")
+source_list+=("${script_path}/fzf-bash-history.sh")
 source_list+=("${script_path}/colors.sh")
 source_list+=("${script_path}/dunst.sh")
+source_list+=("${script_path}/select-audio-sink.sh")
 
 ## source qmk setup script
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh

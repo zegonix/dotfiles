@@ -167,7 +167,7 @@ bindsym $mod+s       exec --no-startup-id maim -su | xclip -selection clipboard 
 bindsym $mod+Shift+s exec --no-startup-id maim -su "/home/${USER}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
 
 # open pavucontrol
-bindsym $mod+a exec --no-startup-id pavucontrol
+bindsym $mod+a exec bash select-audio-sink.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

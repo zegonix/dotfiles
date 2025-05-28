@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 function __search-history {
     current_line="${READLINE_LINE}"
