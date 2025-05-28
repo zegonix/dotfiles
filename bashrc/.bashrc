@@ -84,7 +84,6 @@ source_list+=("${script_path}/navigate_bash_setup.sh")
 source_list+=("${script_path}/fzf-bash-history.sh")
 source_list+=("${script_path}/colors.sh")
 source_list+=("${script_path}/dunst.sh")
-source_list+=("${script_path}/select-audio-sink.sh")
 
 ## source qmk setup script
 # source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
