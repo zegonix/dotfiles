@@ -68,12 +68,9 @@ It is important to execute this and similar commands in the root directory of th
 
 ## Todos
 
-* fish (shell)
-* configure screen locker
-* configure lock screen (probably i3lock)
-* sway (wayland in general..)
-* terminal emulators to keep in mind:
-  * `foot` (wayland exclusive)
-  * `zutty` very lightweight, does not support nerd fonts as of 2025-01-08
+* [ ] configure lock screen (probably i3lock)
+* [ ] sway (wayland in general..)
+* [ ] terminal emulators to keep in mind:
+  * [ ] `foot` (wayland exclusive) -> postponed for potential wayland setup
 
 
