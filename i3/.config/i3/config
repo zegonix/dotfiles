@@ -9,21 +9,21 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $Alt Mod1
+set $Alt   Mod1
 set $Super Mod4
-set $mod Mod4
+set $mod   Mod4
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws1   "1"
+set $ws2   "2"
+set $ws3   "3"
+set $ws4   "4"
+set $ws5   "5"
+set $ws6   "6"
+set $ws7   "7"
+set $ws8   "8"
+set $ws9   "9"
 set $ws10 "10"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -79,7 +79,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 # start a terminal
 bindsym $mod+Return exec ghostty
-bindsym $mod+t exec "alacritty -e tmux attach"
+bindsym $mod+t      exec ghostty -e tmux attach
 
 # change focus
 bindsym $mod+h focus left
@@ -88,9 +88,9 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # move focused window
@@ -100,15 +100,13 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# set splitting strategy
 bindsym $mod+n split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
@@ -164,17 +162,15 @@ bindsym $mod+p move workspace to output right
 
 # take screenshots
 bindsym $mod+s       exec --no-startup-id maim -su | xclip -selection clipboard -t image/png
-bindsym $mod+Shift+s exec --no-startup-id maim -su "/home/${USER}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
+bindsym $mod+Shift+s exec --no-startup-id maim -su "${HOME}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
 
-# open pavucontrol
-bindsym $mod+a exec bash select-audio-sink.sh
-
-# Use pactl to adjust volume in PulseAudio.
+# use pactl for media keys
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym $mod+a               exec --no-startup-id bash select-audio-sink.sh
 
 
 #########################
