@@ -8,3 +8,6 @@
 ;     pretty = format:%C(yellow)%h %C(auto)%d %C(reset)%s %C(cyan)%ad
 [include]
     path = ~/.config/.gitconfig
+
+[alias]
+    graph = log --oneline --all --graph
