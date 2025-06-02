@@ -1,7 +1,7 @@
 * {
   font: "JetBrains Mono Nerd Font 14";
 
-  zx-transparent:       transparent;
+  zx-transparent:       #00000000;
   zx-white:             #C8C8C8FF;
   zx-dark-blue:         #000010EA;
   zx-blue:              #203050C8;
@@ -15,7 +15,7 @@
   zx-accent:            @zx-light-blue;
   zx-text:              @zx-white;
 
-  background-color:     transparent;
+  background-color:     #00000000;
 }
 
 window {
@@ -72,13 +72,13 @@ listview {
   spacing: 5px;
 
   border: 0px;
-  background-color: @transparent; //@zx-background;
+  background-color: @zx-transparent; //@zx-background;
 
   children: [element];
 }
 
 element {
-  background-color: transparent;
+  background-color: @zx-transparent;
   text-color: inherit;
   border: 0;
 
