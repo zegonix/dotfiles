@@ -11,3 +11,4 @@
 
 [alias]
     graph = log --oneline --all --graph
+    oneline = log --oneline
