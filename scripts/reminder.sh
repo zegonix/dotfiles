@@ -20,10 +20,10 @@ EOF
         notify-send "ERROR" "[atd.service] is not running"
     fi
 
-    reminder="$(rofi -dmenu -theme ~/.config/rofi/themes/command-runner-blue.rasi -mesg "${message_reminder}")"
+    reminder="$(rofi -dmenu -theme ~/.config/rofi/themes/input-dialog-blue.rasi -mesg "${message_reminder}")"
     if [[ -z "${reminder}" ]]; then return 1; fi
 
-    time="$(rofi -dmenu -theme ~/.config/rofi/themes/command-runner-blue.rasi -mesg "${message_time}")"
+    time="$(rofi -dmenu -theme ~/.config/rofi/themes/input-dialog-blue.rasi -mesg "${message_time}")"
     if [[ -z "${time}" ]]; then return 1; fi
 
     if ! $(echo "notify-send '${reminder}'" | at "${time}"); then
