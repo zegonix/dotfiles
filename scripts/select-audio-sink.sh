@@ -13,7 +13,7 @@ select_audio_sink() {
         return 1
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -case-smart -dmenu)"
+    selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -dmenu -i --only-match)"
 
     unset number
     for n in ${!names[@]}; do
