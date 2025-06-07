@@ -1,0 +1,82 @@
+* {
+  font: "JetBrains Mono Nerd Font 14";
+
+  zx-transparent:       #00000000;
+  zx-white:             #D8D8D8FF;
+  zx-dark-blue:         #000010EA;
+  zx-blue:              #203050C8;
+  zx-light-blue:        #5bb8ffff;
+  zx-cyan:              #15D7E5FF;
+  zx-light-grey:        #A0A0ADFF;
+  zx-dark-grey:         #202038C8;
+  zx-black:             #000000EA;
+  zx-background:        @zx-dark-blue;
+  zx-secondary:         @zx-dark-grey;
+  zx-accent:            @zx-light-blue;
+  zx-text:              @zx-white;
+
+  background-color:     #00000000;
+}
+
+window {
+  location: center;
+  width: 35%;
+
+  background-color: @zx-background;
+
+  border: 0;
+  border-color: @zx-accent;
+
+  children: [mainbox];
+}
+
+mainbox {
+  background: @zx-transparent;
+  border: 0px;
+  spacing: 4px;
+  orientation: vertical;
+
+  children: [inputbar, message];
+}
+
+inputbar {
+  spacing: 40px;
+  padding: 10px;
+
+  //background-color: @zx-secondary;
+  text-color: @zx-text;
+
+  border: 0 0 1px 0;
+  border-color: @zx-accent;
+
+  children: [entry];
+}
+
+prompt {
+  text-color: @zx-text;
+  text-transform: bold;
+}
+
+entry {
+  text-color: @zx-text;
+  placeholder-color: @zx-text;
+
+  placeholder: "";
+}
+
+prompt, entry {
+  vertical-align: 0.5;
+}
+
+message {
+    border: 0px;
+    padding: 0px;
+    children: [textbox];
+}
+
+textbox {
+    border: 0px;
+    padding: 10px;
+    text-color: @zx-light-grey;
+}
+
