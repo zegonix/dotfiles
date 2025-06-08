@@ -1,0 +1,26 @@
+{
+    "name": "foobar",
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "mode": "dock",
+    "exclusive": true,
+    "spacing": 16,
+    "reload_style_on_change": true,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "clock"],
+
+    "sway/window": {
+        "max-length": 50
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "muted"
+    },
+    "clock": {
+        "name": "clock",
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}"
+    }
+}

@@ -1,0 +1,13 @@
+output DP-2 {
+    resolution 1920x1080@119.982Hz
+    position 0 0
+    background ~/dotfiles/images/sunny_clearing.png fill
+}
+
+output DP-3 {
+    resolution 1920x1080@60.000Hz
+    position 1920 0
+    background ~/dotfiles/images/sunny_clearing.png fill
+}
+
+exec_always xrandr --output DP-2 --primary

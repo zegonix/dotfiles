@@ -1,0 +1,18 @@
+@define-color --black #080B1B;
+@define-color --dark-grey #373B41;
+@define-color --light-grey #707880;
+@define-color --white #C5C8C6;
+@define-color --cyan #15D7E5;
+@define-color --magenta #E02482;
+
+.foobar {
+    font-family: JetBrainsMonoNerdFont;
+    font-weight: bold;
+    font-size: 18px;
+    background: @--black;
+    color: @--white;
+}
+
+#clock {
+    padding: 0 20px;
+}
