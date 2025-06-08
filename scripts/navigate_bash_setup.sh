@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-__call_navigate() {
+function __call_navigate {
     arg_pid=" --pid $$ "
     eval "$(navigate ${arg_pid} $@)"
 }
