@@ -13,7 +13,7 @@ export HISTFILESIZE=${history_size}
 # configure pagers
 export PAGER='less --use-color -R'
 
-if $(which nvim >/dev/null); then
+if $(which nvim &>/dev/null); then
     export MANPAGER='nvim +Man!'
 fi
 
@@ -28,9 +28,13 @@ fi
 
 # define aliases
 alias ls='ls -hal --color=auto'
-alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
+if $(which eza &>/dev/null); then
+    alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
+else
+    alias list='ls -hal --color=auto'
+fi
 
-if $(which rg >/dev/null); then
+if $(which rg &>/dev/null); then
     alias rg='rg --color=always -n'
     alias rgi='rg -i -n -A 1 -B 1 --color=always'
 else
@@ -72,7 +76,9 @@ if [[ "$PATH" != *"dotfiles/scripts/"* ]]; then
 fi
 
 # setup `starship`
-eval "$(starship init bash)"
+if $(which rg &>/dev/null); then
+    eval "$(starship init bash)"
+fi
 
 ## source alias file
 source ~/.bash_alias
