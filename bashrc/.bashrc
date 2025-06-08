@@ -76,7 +76,7 @@ if [[ "$PATH" != *"dotfiles/scripts/"* ]]; then
 fi
 
 # setup `starship`
-if $(which rg &>/dev/null); then
+if $(which starship &>/dev/null); then
     eval "$(starship init bash)"
 fi
 
