@@ -41,13 +41,9 @@ tiling_drag modifier
 # starting auxiliary applications #
 ###################################
 
-## start compositor and polybar, etc.
-#exec --no-startup-id picom -b
-#
-## clean up and start polybar
-#exec_always --no-startup-id killall polybar
-#exec_always --no-startup-id bash ~/.config/polybar/launch_polybar.sh
-#
+# clean up and start polybar
+exec_always --no-startup-id waybar
+
 ## xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 ## screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork

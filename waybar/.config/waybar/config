@@ -2,25 +2,47 @@
     "name": "foobar",
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 36,
     "mode": "dock",
     "exclusive": true,
     "spacing": 16,
     "reload_style_on_change": true,
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "clock"],
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-right": ["cpu", "pulseaudio", "clock#date", "clock#time"],
 
+    "sway/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-output": true,
+        "offscreen-css": true,
+        "offscreen-css-text": "{name}",
+        "sort-by-name": false,
+        "sort-by-coordinates": true
+    },
     "sway/window": {
         "max-length": 50
     },
-    "pulseaudio": {
-        "format": "{volume}%",
-        "format-muted": "muted"
+    "cpu": {
+        "format": " {load}%",
+        "tooltip": false,
+        "interval": 5
     },
-    "clock": {
-        "name": "clock",
-        "format": "{:%Y-%m-%d %H:%M:%S}",
-        "format-alt": "{:%Y-%m-%d %H:%M:%S}"
+    "pulseaudio": {
+        "format": "  {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-muted": " ",
+        "tooltip": false
+    },
+    "clock#date": {
+        "format": "{:%Y-%m-%d}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false,
+        "interval": 3600
+    },
+    "clock#time": {
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%H:%M:%S}",
+        "tooltip": false,
+        "interval": 1
     }
 }

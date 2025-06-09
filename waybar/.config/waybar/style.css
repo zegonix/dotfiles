@@ -1,11 +1,14 @@
 @define-color --black #080B1B;
 @define-color --dark-grey #373B41;
 @define-color --light-grey #707880;
-@define-color --white #C5C8C6;
+@define-color --lighter-grey #989CA8;
+@define-color --white #D5D8D6;
 @define-color --cyan #15D7E5;
 @define-color --magenta #E02482;
+@define-color --light-magenta #FFA0D0;
+@define-color --green #4E9C3D;
 
-.foobar {
+window#waybar {
     font-family: JetBrainsMonoNerdFont;
     font-weight: bold;
     font-size: 18px;
@@ -13,6 +16,53 @@
     color: @--white;
 }
 
-#clock {
+.modules-left {
+    padding: 0 0;
+}
+
+.modules-center {
+    padding: 0 0px;
+}
+
+.modules-right {
     padding: 0 20px;
+}
+
+#workspaces button {
+    padding: 0 12px;
+    border: none;
+    border-radius: 0;
+    background: @--black;
+    color: @--cyan;
+}
+
+#workspaces button.focused {
+    background: @--dark-grey;
+    border-bottom: 2px solid @--cyan;
+}
+
+#workspaces button.urgent {
+    background: @--magenta;
+    color: @--black;
+}
+
+#window {
+    padding: 0 30px;
+}
+
+#cpu {
+    color: @--lighter-grey;
+}
+
+#pulseaudio {
+    padding: 0 30px;
+    color: @--white;
+}
+
+#clock.date {
+    color: @--light-magenta;
+}
+
+#clock.time {
+    color: @--light-magenta;
 }
