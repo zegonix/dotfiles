@@ -13,7 +13,7 @@ select_audio_sink() {
         return 1
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -dmenu -i --only-match)"
+    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --dmenu)"
 
     unset number
     for n in ${!names[@]}; do

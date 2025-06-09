@@ -2,7 +2,7 @@
 
 source process-status.sh
 
-set_reminder() {
+function set_reminder {
     message_reminder=$(
         cat <<'EOF'
 enter reminder message to display when the timer rings
@@ -20,10 +20,10 @@ EOF
         notify-send "ERROR" "[atd.service] is not running"
     fi
 
-    reminder="$(rofi -dmenu -theme ~/.config/rofi/themes/input-dialog-blue.rasi -mesg "${message_reminder}")"
+    reminder="$(fuzzel --dmenu)"
     if [[ -z "${reminder}" ]]; then return 1; fi
 
-    time="$(rofi -dmenu -theme ~/.config/rofi/themes/input-dialog-blue.rasi -mesg "${message_time}")"
+    time="$(fuzzel --dmenu)"
     if [[ -z "${time}" ]]; then return 1; fi
 
     if ! $(echo "notify-send '${reminder}'" | at "${time}"); then
