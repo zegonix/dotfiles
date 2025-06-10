@@ -43,6 +43,7 @@ exec swayidle -w \
 	before-sleep 'swaylock -f -e -i ~/dotfiles/images/city_skyline.png'
 
 exec sway-audio-idle-inhibit
+for_window [class="steam_app.*"] inhibit_idle open
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
