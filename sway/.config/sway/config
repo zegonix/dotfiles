@@ -38,9 +38,11 @@ bar {
 # start screen locker
 exec swayidle -w \
 	timeout 300 'swaylock -f -e -i ~/dotfiles/images/city_skyline.png' \
-	timeout 330 'swaymsg "output * power off"' \
+	timeout 330 'swaymsg "output * power off"; systemctl suspend' \
     resume 'swaymsg "output * power on"' \
 	before-sleep 'swaylock -f -e -i ~/dotfiles/images/city_skyline.png'
+
+exec sway-audio-idle-inhibit
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -60,14 +62,12 @@ bindsym $mod+Shift+r restart
 ### exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 ## lock screen
-bindsym $mod+Escape exec swaylock -f -e -c 000000
+bindsym $mod+Escape exec systemctl suspend
 ## kill focused window
 bindsym $mod+Shift+q kill
 
 # start programm launcher
 bindsym $mod+d       exec fuzzel
-#bindsym $mod+d       exec rofi -show combi
-#bindsym $mod+Shift+d exec rofi -show run
 
 # start a terminal
 bindsym $mod+Return exec foot
@@ -97,8 +97,8 @@ bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # set splitting strategy
-bindsym $mod+n split h
-bindsym $mod+v split v
+bindsym $mod+n layout splith
+bindsym $mod+v layout splitv
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle

@@ -1,13 +1,19 @@
-output DP-2 {
+set $main_display DP-2
+set $secondary_display DP-3
+
+output $main_display {
     resolution 1920x1080@119.982Hz
     position 0 0
     background ~/dotfiles/images/sunny_clearing.png fill
 }
 
-output DP-3 {
+output $secondary_display {
     resolution 1920x1080@60.000Hz
     position 1920 0
     background ~/dotfiles/images/sunny_clearing.png fill
 }
+
+workspace 1 output $main_display
+workspace 2 output $secondary_display
 
 exec_always xrandr --output DP-2 --primary
