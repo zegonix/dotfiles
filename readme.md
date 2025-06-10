@@ -14,7 +14,6 @@ A collection of configuration files meant to be used with GNU stow, hence the di
 * dunst
 * eza
 * feh
-* firefox
 * fzf
 * git
 * ghostty
