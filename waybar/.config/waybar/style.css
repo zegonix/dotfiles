@@ -50,6 +50,11 @@ window#waybar {
     padding: 0 30px;
 }
 
+#language {
+    padding: 0 30px;
+    color: @--lighter-grey;
+}
+
 #cpu {
     color: @--lighter-grey;
 }

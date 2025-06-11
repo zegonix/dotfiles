@@ -50,8 +50,12 @@ for_window [class="steam_app.*"] inhibit_idle open
 exec nm-applet
 
 ### configuring input
-input * accel_profile flat
-input * pointer_accel 0.53
+input type:keyboard {
+    xkb_layout "us,us(intl)"
+}
+input type:pointer accel_profile flat
+input type:pointer pointer_accel 0.53
+
 
 ### configuring keybindings
 
@@ -151,6 +155,9 @@ bindsym $mod+u move workspace to output left
 bindsym $mod+i move workspace to output down
 bindsym $mod+o move workspace to output up
 bindsym $mod+p move workspace to output right
+
+# switch keyboard layout
+bindsym $mod+Shift+n exec swaymsg input type:keyboard xkb_switch_layout next
 
 ## take screenshots
 #bindsym $mod+s       exec maim -su | xclip -selection clipboard -t image/png

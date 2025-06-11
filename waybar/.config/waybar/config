@@ -8,7 +8,7 @@
     "spacing": 16,
     "reload_style_on_change": true,
     "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["cpu", "pulseaudio", "clock#date", "clock#time"],
+    "modules-right": ["sway/language", "cpu", "pulseaudio", "clock#date", "clock#time"],
 
     "sway/workspaces": {
         "format": "{name}",
@@ -22,13 +22,17 @@
     "sway/window": {
         "max-length": 50
     },
+    "sway/language": {
+        "format": " {short} {variant}",
+        "tooltip": true
+    },
     "cpu": {
-        "format": " {load}%",
+        "format": " {usage:3}%",
         "tooltip": false,
         "interval": 5
     },
     "pulseaudio": {
-        "format": "  {volume}%",
+        "format": " {volume}%",
         "format-bluetooth": "  {volume}%",
         "format-muted": " ",
         "tooltip": false
