@@ -13,7 +13,17 @@ select_audio_sink() {
         return 1
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${#names[@]} --dmenu)"
+    if ((${#ids[@]} > 16)); then
+        lines=16
+    else
+        lines=${#ids[@]}
+    fi
+
+    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu)"
+
+    if [[ -z "${selection}" ]]; then
+        return 1
+    fi
 
     unset number
     for n in ${!names[@]}; do
