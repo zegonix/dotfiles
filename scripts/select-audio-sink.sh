@@ -13,7 +13,7 @@ select_audio_sink() {
         return 1
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --dmenu)"
+    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${#names[@]} --dmenu)"
 
     unset number
     for n in ${!names[@]}; do
