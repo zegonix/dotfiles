@@ -4,12 +4,24 @@ select_audio_sink() {
     sinks="$(pactl list sinks)"
 
     IFS=$(echo -en "\n\b")
+    devices=($(echo "${sinks}" | grep -ioP "(?<=name: ).*$"))
     ids=($(echo "${sinks}" | grep -ioP "(?<=object.serial = ).*$"))
     names=($(echo "${sinks}" | grep -ioP "(?<=device\.description = ).*$"))
     unset IFS
 
-    if [[ "${#ids[@]}" != "${#names[@]}" ]]; then
+    if [[ "${#ids[@]}" != "${#names[@]}" ]] || [[ "${#ids[@]}" != "${#devices[@]}" ]]; then
         echo "ERROR: #ids (${#ids[@]}) != #names (${#names[@]})"
+        return 1
+    fi
+
+    unset number
+    for n in ${!devices[@]}; do
+        if [[ "${devices[$n]}" == "$(pactl get-default-sink)" ]]; then
+            number=$n
+            break
+        fi
+    done
+    if [[ -z "${number}" ]]; then
         return 1
     fi
 
@@ -19,7 +31,7 @@ select_audio_sink() {
         lines=${#ids[@]}
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu)"
+    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu --select-index ${number})"
 
     if [[ -z "${selection}" ]]; then
         return 1
@@ -29,6 +41,7 @@ select_audio_sink() {
     for n in ${!names[@]}; do
         if [[ "${names[$n]}" == *"${selection}"* ]]; then
             number=$n
+            break
         fi
     done
 
