@@ -51,7 +51,7 @@ exec nm-applet
 
 ### configuring input
 input type:keyboard {
-    xkb_layout "us,us(intl)"
+    xkb_layout "us,us(intl),ch"
 }
 input type:pointer accel_profile flat
 input type:pointer pointer_accel 0.53
@@ -59,20 +59,17 @@ input type:pointer pointer_accel 0.53
 
 ### configuring keybindings
 
-# keymaps for i3 actions
-## reload the i3 configuration file
+# reload the configuration file
 bindsym $mod+Shift+c reload
-## restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-### exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-## lock screen
+# lock screen
 bindsym $mod+Escape exec systemctl suspend
-## kill focused window
+# kill focused window
 bindsym $mod+Shift+q kill
 
 # start programm launcher
-bindsym $mod+d       exec fuzzel
+bindsym $mod+d exec fuzzel
 
 # start a terminal
 bindsym $mod+Return exec foot
@@ -157,7 +154,8 @@ bindsym $mod+o move workspace to output up
 bindsym $mod+p move workspace to output right
 
 # switch keyboard layout
-bindsym $mod+Shift+n exec swaymsg input type:keyboard xkb_switch_layout next
+bindsym --locked $mod+Shift+n exec swaymsg input type:keyboard xkb_switch_layout next
+bindsym --locked $mod+Shift+m exec bash sway-kb-layout-switcher.sh
 
 ## take screenshots
 #bindsym $mod+s       exec maim -su | xclip -selection clipboard -t image/png
@@ -173,7 +171,7 @@ bindsym --locked XF86AudioPlay        exec playerctl play-pause
 bindsym --locked XF86AudioPrev        exec playerctl previous
 bindsym --locked XF86AudioNext        exec playerctl next
 bindsym --locked XF86AudioStop        exec playerctl stop
-bindsym $mod+a                        exec bash select-audio-sink.sh
+bindsym $mod+a                        exec bash audio-sink-switcher.sh
 
 
 ### configuring behaviour
