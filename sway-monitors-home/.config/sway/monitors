@@ -16,4 +16,4 @@ output $secondary_display {
 workspace 1 output $main_display
 workspace 2 output $secondary_display
 
-exec_always xrandr --output DP-2 --primary
+exec_always xrandr --output $main_display --primary
