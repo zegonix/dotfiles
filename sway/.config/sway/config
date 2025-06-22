@@ -212,8 +212,8 @@ client.urgent           $transp  $back_focus  $text_focus  $transp    $transp
 client.placeholder      $transp  $back_focus  $text_focus  $transp    $transp
 
 # transparent windows
-for_window [app_id="foot"] opacity 0.9
-for_window [app_id="com.mitchellh.ghostty"] opacity 0.9
-for_window [class="Alacritty"] opacity 0.9
+for_window [app_id="foot"] opacity 0.88
+for_window [app_id="com.mitchellh.ghostty"] opacity 0.88
+for_window [class="Alacritty"] opacity 0.88
 for_window [class="SpeedCrunch"] opacity 0.93
 

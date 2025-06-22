@@ -39,8 +39,8 @@ vim.keymap.set("n", "<S-Left>", ":vertical resize -1<CR>", opts)
 vim.keymap.set("n", "<S-Right>", ":vertical resize +1<CR>", opts)
 
 -- Buffers
--- vim.keymap.set("n", "<C-S-j>", ":bnext<CR>", opts)
--- vim.keymap.set("n", "<C-S-k>", ":bprevious<CR>", opts)
+-- vim.keymap.set("n", "<C-S-f>", ":bnext<CR>", opts)
+-- vim.keymap.set("n", "<C-S-d>", ":bprevious<CR>", opts)
 vim.keymap.set("n", "<leader>x", ":bdelete!<CR>", opts)   -- close buffer
 vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", opts) -- new buffer
 
@@ -80,5 +80,3 @@ vim.keymap.set("v", "p", '"_dP', opts)
 -- Tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", opts)   -- open new tab
 vim.keymap.set("n", "<leader>tw", ":tabclose<CR>", opts) -- close current tab
--- vim.keymap.set("n", "<C-Tab>", ":tabn<CR>", opts)        --  go to next tab
--- vim.keymap.set("n", "<C-S-Tab>", ":tabp<CR>", opts)      --  go to previous tab
