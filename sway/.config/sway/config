@@ -156,9 +156,11 @@ bindsym $mod+p move workspace to output right
 bindsym --locked $mod+Shift+n exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym --locked $mod+Shift+m exec bash sway-kb-layout-switcher.sh
 
-## take screenshots
-#bindsym $mod+s       exec maim -su | xclip -selection clipboard -t image/png
-#bindsym $mod+Shift+s exec maim -su "${HOME}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
+# take screenshots
+set $screenshot_directory "$HOME/Pictures/screenshots/"
+exec_always mkdir -p $screenshot_directory
+bindsym $mod+s       exec slurp | grim -g - - | wl-copy
+bindsym $mod+Shift+s exec slurp | grim -g - "$screenshot_directory/$(date '+%Y%m%d_%H%M%S')_screenshot.png"
 
 # use pactl for media keys
 set $refresh_i3status killall -SIGUSR1 i3status
