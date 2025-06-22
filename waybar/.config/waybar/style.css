@@ -7,6 +7,7 @@
 @define-color --magenta #E02482;
 @define-color --light-magenta #FFA0D0;
 @define-color --green #4E9C3D;
+@define-color --transparent rgba(0, 0, 0, 0);
 
 window#waybar {
     font-family: JetBrainsMonoNerdFont;
@@ -43,7 +44,8 @@ window#waybar {
 
 #workspaces button.urgent {
     background: @--magenta;
-    color: @--black;
+    color: @--white;
+    border-bottom: 0px solid @--transparent;
 }
 
 #window {
