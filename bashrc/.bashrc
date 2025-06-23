@@ -27,6 +27,11 @@ fi
 #bind -r "\C-l"
 
 # define aliases
+if ! $(which navigate &>/dev/null); then
+    alias push='pushd'
+    alias pop='popd'
+fi
+
 alias ls='ls -hal --color=auto'
 if $(which eza &>/dev/null); then
     alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
