@@ -1,0 +1,20 @@
+set $main_display DP-7
+set $secondary_display DP-5
+
+output $main_display {
+    resolution 2560x1440@59.951Hz
+    position 1440 600
+    background ~/dotfiles/images/dungeon_forest.jpg fill
+}
+
+output $secondary_display {
+    resolution 2560x1440@59.951Hz
+    transform 270
+    position 0 0
+    background ~/dotfiles/images/dungeon_forest.jpg fill
+}
+
+workspace 1 output $main_display
+workspace 2 output $secondary_display
+
+exec_always xrandr --output $main_display --primary
