@@ -1,5 +1,4 @@
 format = """
-\n\
 [╭─ ](bold fg:zx_white)[⟨](bold fg:zx_light_magenta) \
 $hostname$username \
 [//](bold zx_magenta)\
@@ -14,7 +13,7 @@ $fill$status\
 """
 
 # Disable the blank line at the start of the prompt
-add_newline = false
+add_newline = true
 
 palette = 'zegonix'
 
