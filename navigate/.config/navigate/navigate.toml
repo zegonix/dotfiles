@@ -1,23 +1,29 @@
 [general]
 show_stack_on_push = false
 show_stack_on_pop = false
-show_books_on_bookmark = false
+show_invalid_stack_entries = false
+show_entries_on_bookmark = false
+show_invalid_bookmarks = true
+cleanup_bookmarks = false
 
 [format]
-stack_separator = " = "
-bookmarks_separator = " = "
-stack_hide_numbers = false
-show_home_as_tilde = true
 align_separators = true
+show_home_as_tilde = true
+stack_hide_numbers = false
+stack_separator = ' = '
+bookmarks_separator = ' = '
 
 [styles]
-warning_style = "yellow, italic"
-error_style = "red, bold"
-stack_number_style = "default"
-stack_separator_style = "cyan"
-stack_path_style = "italic"
-stack_punct_style = "#805820"
-bookmarks_name_style = "bold"
-bookmarks_seperator_style = "cyan"
-bookmarks_path_style = "italic"
-bookmarks_punct_style = "bold, #805820"
+warning_style = 'yellow, italic'
+error_style = 'red, bold'
+stack_number_style = 'default'
+stack_separator_style = 'cyan'
+stack_path_style = 'italic'
+stack_punct_style = '#805820'
+stack_invalid_style = '#CCCCCC, strikethrough'
+bookmarks_name_style = 'bold'
+bookmarks_seperator_style = 'cyan'
+bookmarks_path_style = 'italic'
+bookmarks_punct_style = 'bold, #805820'
+bookmarks_invalid_style = '#CCCCCC, strikethrough'
+

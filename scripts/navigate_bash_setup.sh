@@ -34,11 +34,11 @@ function navconfig {
 function _book {
     CURRENT_WORD=${COMP_WORDS[COMP_CWORD]}
     if [[ COMP_CWORD -eq 1 ]]; then
-        BOOKMARKS="add remove $(__call_navigate bookmark names)"
+        BOOKMARKS="add remove $(__call_navigate bookmark completions)"
         COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
     elif [[ COMP_CWORD -eq 2 ]]; then
         if [[ "${COMP_WORDS[1]}" = "remove" ]]; then
-            BOOKMARKS="$(__call_navigate bookmark names)"
+            BOOKMARKS="$(__call_navigate bookmark completions)"
             COMPREPLY=($(compgen -W "${BOOKMARKS}" -- $CURRENT_WORD))
         fi
     elif [[ COMP_CWORD -eq 3 ]]; then
