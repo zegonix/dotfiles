@@ -46,7 +46,7 @@ else
     alias grep='grep --color=always'
 fi
 
-alias bdiff='diff --color=always'
+alias bdiff='diff -uw --color=always'
 
 alias bashsource='source ~/.bashrc'
 
