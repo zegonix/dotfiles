@@ -20,6 +20,10 @@ function switch_kb_layout {
         number=${#layouts[@]}
     fi
 
+    # # select current layout NOTE: if index would work...
+    # current_layout="$(swaymsg -t get_inputs | grep -iP "active_layout_index" | grep -ioP "(?<=: ).*(?=,)" -m 1)"
+    # selection="$(printf "%s\n" "${layouts[@]}" | fuzzel --lines ${number} --dmenu --select-index ${current_layout})"
+
     selection="$(printf "%s\n" "${layouts[@]}" | fuzzel --lines ${number} --dmenu)"
 
     if [[ -z "${selection}" ]]; then
