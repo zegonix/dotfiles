@@ -15,6 +15,7 @@ export PAGER='less --use-color -R'
 
 if $(which nvim &>/dev/null); then
     export MANPAGER='nvim +Man!'
+    alias vim='nvim'
 fi
 
 # If not running interactively, don't do anything
@@ -51,7 +52,9 @@ alias bdiff='diff -uw --color=always'
 alias bashsource='source ~/.bashrc'
 
 # for convenient opening of pdfs..
-alias firefox='librewolf'
+if $(which librewolf &>/dev/null); then
+    alias firefox='librewolf'
+fi
 
 # short forms for tmux commands
 ## run script to setup default tmux session and then attach the session
@@ -88,18 +91,13 @@ fi
 ## source alias file
 source ~/.bash_alias
 
-## source custom functions for specific purposes
-script_path=${HOME}/dotfiles/scripts/
+## source various scripts
+personal_scripts=${HOME}/dotfiles/scripts/
 source_list=()
-source_list+=("${script_path}/navigate_bash_setup.sh")
-source_list+=("${script_path}/fzf-bash-history.sh")
-source_list+=("${script_path}/colors.sh")
-source_list+=("${script_path}/dunst.sh")
-
-## source qmk setup script
-# source /home/scbj/repos/qmk_firmware/util/qmk_tab_complete.sh
-
-## source cargo setup script
+source_list+=("${personal_scripts}/navigate_bash_setup.sh")
+source_list+=("${personal_scripts}/fzf-bash-history.sh")
+source_list+=("${personal_scripts}/colors.sh")
+source_list+=("${personal_scripts}/dunst.sh")
 source_list+=("$HOME/.cargo/env")
 
 for script in ${source_list[@]}; do
@@ -108,6 +106,8 @@ for script in ${source_list[@]}; do
     fi
 done
 
+# disable terminal flow control (XON/XOFF) -> disable `C-s/C-q` keybindings
+# this way the keybindings can be used for other purposes
 if [[ -t 0 && $- = *i* ]]; then
     stty -ixon
 fi
