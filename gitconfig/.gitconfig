@@ -10,5 +10,6 @@
     path = ~/.config/.gitconfig
 
 [alias]
+    branches = branch -a
     graph = log --oneline --all --graph
     oneline = log --oneline
