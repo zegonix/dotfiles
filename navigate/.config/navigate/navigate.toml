@@ -1,4 +1,6 @@
 [general]
+dedup_stack = false
+rotate_stack_on_jump_to_entry = false
 show_stack_on_push = false
 show_stack_on_pop = false
 show_invalid_stack_entries = false
@@ -19,11 +21,11 @@ error_style = 'red, bold'
 stack_number_style = 'default'
 stack_separator_style = 'cyan'
 stack_path_style = 'italic'
-stack_punct_style = '#805820'
+stack_punct_style = '#805820, bold'
 stack_invalid_style = '#CCCCCC, strikethrough'
 bookmarks_name_style = 'bold'
 bookmarks_seperator_style = 'cyan'
 bookmarks_path_style = 'italic'
-bookmarks_punct_style = 'bold, #805820'
+bookmarks_punct_style = '#805820, bold'
 bookmarks_invalid_style = '#CCCCCC, strikethrough'
 
