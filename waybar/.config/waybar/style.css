@@ -12,7 +12,7 @@
 window#waybar {
     font-family: JetBrainsMonoNerdFont;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     background: @--black;
     color: @--white;
 }
@@ -37,7 +37,7 @@ window#waybar {
     color: @--cyan;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background: @--dark-grey;
     border-bottom: 2px solid @--cyan;
 }

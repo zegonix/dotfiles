@@ -2,15 +2,15 @@
     "name": "foobar",
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 30,
     "mode": "dock",
     "exclusive": true,
     "spacing": 16,
     "reload_style_on_change": true,
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["sway/language", "cpu", "pulseaudio", "clock#date", "clock#time"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right": ["hyprland/language", "cpu", "pulseaudio", "clock#date", "clock#time"],
 
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
         "all-output": true,
@@ -19,11 +19,11 @@
         "sort-by-name": false,
         "sort-by-coordinates": true
     },
-    "sway/window": {
+    "hyprland/window": {
         "max-length": 50
     },
 
-    "sway/language": {
+    "hyprland/language": {
         "format": " {short} {variant}",
         "tooltip": true
     },
