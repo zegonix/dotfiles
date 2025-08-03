@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 if ! $(which navigate &>/dev/null); then
-    printf "\033[0;31mcould not find 'navigate' on path" >&2
     return 1
 fi
 
