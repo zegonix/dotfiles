@@ -31,7 +31,13 @@ select_audio_sink() {
         lines=${#ids[@]}
     fi
 
-    selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu --select-index ${number})"
+    if $(which rofi &>/dev/null); then
+        selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -dmenu -fixed-num-lines ${lines} -selected-row ${number} -case-smart)"
+    elif $(which fuzzel &>/dev/null); then
+        selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu --select-index ${number})"
+    else
+        return 1
+    fi
 
     if [[ -z "${selection}" ]]; then
         return 1
