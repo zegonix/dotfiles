@@ -47,7 +47,7 @@ exec_always --no-startup-id bash ~/.config/polybar/launch_polybar.sh
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -e -c 7070bb
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -66,7 +66,7 @@ bindsym $mod+Shift+r restart
 ## exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 ## lock screen
-bindsym $mod+Escape exec i3lock
+bindsym $mod+Escape exec i3lock --nofork -e -c 7070bb
 ## kill focused window
 bindsym $mod+Shift+q kill
 ## start/kill compositor
@@ -217,3 +217,5 @@ client.urgent           $transp  $back_focus  $text_focus  $transp    $transp
 client.placeholder      $transp  $back_focus  $text_focus  $transp    $transp
 
 client.background       #ffffff
+
+exec workspace number $sw1
