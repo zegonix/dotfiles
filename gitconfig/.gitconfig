@@ -1,15 +1,19 @@
 [core]
 	editor = nvim
+
 [pull]
 	rebase = true
+
 [log]
     date = iso-local
-; [format]
-;     pretty = format:%C(yellow)%h %C(auto)%d %C(reset)%s %C(cyan)%ad
+
 [include]
     path = ~/.config/.gitconfig
+
+[format]
+    pretty = tformat:%C(yellow)%h %C(blue)%as%C(auto)%d %C(reset)%s
 
 [alias]
     branches = branch -a
     graph = log --oneline --all --graph
-    oneline = log --oneline
+    oneline = log -20
