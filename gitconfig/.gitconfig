@@ -14,6 +14,5 @@
     pretty = tformat:%C(yellow)%h %C(blue)%as%C(auto)%d %C(reset)%s
 
 [alias]
-    branches = branch -a
     graph = log --oneline --all --graph
     oneline = log -20
