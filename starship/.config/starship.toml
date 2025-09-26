@@ -1,13 +1,13 @@
 format = """
-[╭─ ](bold fg:zx_white)[⟨](bold fg:zx_light_magenta) \
+[╭─ ](bold fg:zx_white)[{](bold fg:zx_light_magenta) \
 $hostname$username \
 [//](bold zx_magenta)\
 $directory\
 [//](bold zx_cyan)\
-$git_branch[-](zx_gray)$git_status\
-[//](bold zx_yellow)\
-$jobs\
-[⟩ ](bold zx_light_yellow)\
+$git_branch \
+[//](bold zx_yellow) \
+$git_status\
+[} ](bold zx_light_yellow)\
 $fill$status\
 \n[╰─](bold) $python\ 
 """
@@ -64,14 +64,15 @@ truncate_to_repo = false
 disabled = false
 symbol = ""
 style = "fg:zx_white"
-format = '[$symbol $branch ]($style)'
-truncation_length = 16
-truncation_symbol = ">"
+format = '[ $symbol$branch]($style)'
+truncation_length = 15
+truncation_symbol = "_"
 
 [git_status]
 disabled = false
+ignore_submodules = true
 style = "fg:zx_white"
-format = '[ $all_status$ahead_behind ]($style)'
+format = '[$all_status$ahead_behind ]($style)'
 conflicted = ' '
 ahead = ' '
 behind = ' '
