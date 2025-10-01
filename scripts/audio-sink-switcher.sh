@@ -36,10 +36,12 @@ select_audio_sink() {
     elif $(which fuzzel &>/dev/null); then
         selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu --select-index ${number})"
     else
+        notify-send "sink-switcher" "requires either [rofi] or [fuzzel]"
         return 1
     fi
 
     if [[ -z "${selection}" ]]; then
+        notify-send "sink-switcher" "selection failed"
         return 1
     fi
 
@@ -52,7 +54,7 @@ select_audio_sink() {
     done
 
     if [[ -z "${number}" ]]; then
-        echo "something went wrong.."
+        notify-send "sink-switcher" "something went wrong.."
         return 1
     fi
 
