@@ -28,7 +28,6 @@ function switch_kb_layout {
         fi
     done
     if [[ -z "${index}" ]]; then
-        notify-send "layout-switcher" "selection failed"
         return 1
     fi
 

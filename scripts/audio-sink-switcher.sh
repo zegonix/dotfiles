@@ -41,7 +41,6 @@ select_audio_sink() {
     fi
 
     if [[ -z "${selection}" ]]; then
-        notify-send "sink-switcher" "selection failed"
         return 1
     fi
 
