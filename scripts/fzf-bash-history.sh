@@ -2,11 +2,7 @@
 
 function __search-history {
     current_line="${READLINE_LINE}"
-    if [[ -n $current_line ]]; then
-        command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right -q ${current_line}))
-    else
-        command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right))
-    fi
+    command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right -q "${current_line}"))
 
     # print command to terminal for editting
     if [[ ${command[0]} = "tab" || ${command[0]} = "right" ]]; then
@@ -17,11 +13,10 @@ function __search-history {
     # strip white space
     command="${command[@]}"
     READLINE_LINE="${command}"
-    READLINE_POINT=$(( 0 + ${#command} ))
+    READLINE_POINT=$((0 + ${#command}))
 }
 
 if command -v fzf 2>&1 >/dev/null; then
     bind -r "\C-r"
     bind -x '"\C-r": __search-history'
 fi
-
