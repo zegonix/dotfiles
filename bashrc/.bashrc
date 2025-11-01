@@ -94,8 +94,8 @@ fi
 ## source various scripts
 personal_scripts=${HOME}/dotfiles/scripts/
 source_list=()
+source_list+=("$HOME/.bash_paths")
 source_list+=("$HOME/.bash_alias")
-source_list+=("$HOME/.bash_profile")
 source_list+=("${personal_scripts}/navigate_bash_setup.sh")
 source_list+=("${personal_scripts}/fzf-bash-history.sh")
 source_list+=("${personal_scripts}/colors.sh")
