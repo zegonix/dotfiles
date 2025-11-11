@@ -52,6 +52,10 @@ alias bdiff='diff -uw --color=always'
 
 alias sbash='source ~/.bashrc'
 
+if $(which ip &>/dev/null); then
+    alias ip='ip -c'
+fi
+
 # because `libreWolf` is ambiguous for tab completion
 if $(which librewolf &>/dev/null); then
     alias firefox='librewolf'
