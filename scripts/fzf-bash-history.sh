@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[[ "$-" != "*i*" ]] || return
+
 function __search-history {
     current_line="${READLINE_LINE}"
     command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right -q "${current_line}"))
