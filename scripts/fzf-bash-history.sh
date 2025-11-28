@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-[[ "$-" != "*i*" ]] || return
-
 function __search-history {
     current_line="${READLINE_LINE}"
     command=($(fc -lnr 1 | fzf --scheme=history --tmux --expect=tab,right -q "${current_line}"))
@@ -25,7 +23,7 @@ function __search-history {
     READLINE_POINT=$((0 + ${#command}))
 }
 
-if command -v fzf 2>&1 >/dev/null; then
+if [[ "$-" == *i* ]] && which fzf &>/dev/null; then
     bind -r "\C-r"
     bind -x '"\C-r": __search-history'
 fi
