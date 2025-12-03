@@ -34,7 +34,6 @@ if ! $(which navigate &>/dev/null); then
     alias stack='dirs -v'
 fi
 
-alias ls='ls -hal --color=auto'
 if $(which eza &>/dev/null); then
     alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
 else
