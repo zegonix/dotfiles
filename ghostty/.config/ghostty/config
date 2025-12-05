@@ -1,6 +1,10 @@
 title =   spooky scary terminal
 
 font-family = JetBrainsMono Nerd Font
+font-style = Regular
+font-style-bold = ExtraBold
+font-style-italic = Italic
+font-style-bold-italic = ExtraBold Italic
 font-size = 16.0
 font-feature = -calt
 font-feature = -liga
