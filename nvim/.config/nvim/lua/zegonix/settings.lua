@@ -27,10 +27,15 @@ vim.o.smartcase = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear search highlight on `ESC`
 
 -- set tab to 4 spaces and convert tabs to spaces
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
+  end,
+})
 
 -- make cursor shy of window border by n lines/characters
 vim.o.scrolloff = 8
