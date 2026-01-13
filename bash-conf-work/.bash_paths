@@ -7,8 +7,7 @@
 # to find scripts and utilities
 
 export_paths=("${HOME}/dotfiles/scripts")
-export_paths+=("$HOME/tools/Xilinx/Vivado/2021.1/bin")
-export_paths+=("$HOME/tools/jlink")
+export_paths+=("${HOME}/tools/jlink")
 
 for entry in ${export_paths[@]}; do
     if ! [[ -d "${entry}" ]]; then
