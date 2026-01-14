@@ -40,12 +40,15 @@ else
     alias list='ls -hal --color=auto'
 fi
 
+# aliases related to `grep`
+if $(which ug &>/dev/null); then
+    alias ugi='ug -j'
+fi
 if $(which rg &>/dev/null); then
     alias rg='rg --color=always -n'
     alias rgi='rg -i -n -A 1 -B 1 --color=always'
-else
-    alias grep='grep --color=always'
 fi
+alias grep='grep --color=always'
 
 alias bdiff='diff -uw --color=always'
 
@@ -110,6 +113,9 @@ for script in ${source_list[@]}; do
         source ${script}
     fi
 done
+
+# configure `fzf` (fuzzy finder)
+export FZF_DEFAULT_OPTS='--style default'
 
 # disable terminal flow control (XON/XOFF) -> disable `C-s/C-q` keybindings
 # this way the keybindings can be used for other purposes
