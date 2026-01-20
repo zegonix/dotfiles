@@ -68,7 +68,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ## lock screen
 bindsym $mod+Escape exec i3lock --nofork -e -c 7070bb
 ## kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 ## start/kill compositor
 bindsym $mod+Shift+f exec --no-startup-id picom -b
 bindsym $mod+Shift+v exec pkill picom
