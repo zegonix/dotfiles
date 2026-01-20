@@ -2,8 +2,10 @@
 //@theme "~/.config/rofi/themes/zegonix-black.rasi"
 
 configuration {
-  modes: "combi,window,run,ssh";
-  combi-modes: "drun,run,ssh";
+  modes: "combi,window,run";
+  combi-modes: "drun,run";
+  drun-match-fields: "filename,name,generic,keywords";
+  matching: "fuzzy";
   monitor: -1;
   terminal: "ghostty";
   case-sensitive: false;
