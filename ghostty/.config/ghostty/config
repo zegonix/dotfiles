@@ -15,7 +15,7 @@ background-opacity = 1.0
 
 selection-invert-fg-bg = true
 
-window-decoration = false
+window-decoration = server
 mouse-scroll-multiplier = 1.0
 app-notifications = no-clipboard-copy
 copy-on-select = false
