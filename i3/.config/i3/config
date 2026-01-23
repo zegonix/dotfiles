@@ -77,6 +77,9 @@ bindsym $mod+Shift+v exec pkill picom
 bindsym $mod+d       exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
+# start keyboard layout selector
+bindsym $mod+m  exec --no-startup-id i3-kb-layout-switcher.sh
+
 # start a terminal
 bindsym $mod+Return exec ghostty
 bindsym $mod+t      exec ghostty -e tmux attach
