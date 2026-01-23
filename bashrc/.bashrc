@@ -106,7 +106,7 @@ source_list+=("${personal_scripts}/navigate_bash_setup.sh")
 source_list+=("${personal_scripts}/fzf-bash-history.sh")
 source_list+=("${personal_scripts}/colors.sh")
 source_list+=("${personal_scripts}/dunst.sh")
-source_list+=("${personal_scripts}/i3-kb-layout-switcher")
+source_list+=("${personal_scripts}/i3-kb-layout-switcher.sh")
 source_list+=("$HOME/.cargo/env")
 
 for script in ${source_list[@]}; do
