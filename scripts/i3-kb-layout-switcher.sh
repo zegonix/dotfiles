@@ -4,7 +4,7 @@ function switch_kb_layout {
     layouts=("us" "us" "ch")
     variants=("" "intl" "")
     lines=${#layouts[@]}
-    number=0
+    index=0
     selection=-1
 
     if [[ ${#layouts[@]} -ne ${#variants[@]} ]]; then
@@ -15,17 +15,22 @@ function switch_kb_layout {
     unset names
     for n in ${!layouts[@]}; do
         if [[ -n "${variants[$n]}" ]]; then
-            names+=("${layouts[$n]}:${variants[$n]}")
+            names+=("${layouts[$n]}(${variants[$n]})")
         else
             names+=("${layouts[$n]}")
         fi
     done
 
-    # ## TODO: use `setxkbmap -print` to get status
-    # current="$(echo "${devices}" | grep -ioP '(?<="active_layout_index": ).*(?=,)' -m 1)"
+    current="$(setxkbmap -print | sed -n '/xkb_symbols/p' | sed -E 's/.*pc\+([^+]+)\+.*/\1/')"
+    for n in ${!layouts[@]}; do
+        if [[ "${current}" == "${layouts[$n]}(${variants[$n]})" ]]; then
+            index=${n}
+            break
+        fi
+    done
 
     if $(which rofi &>/dev/null); then
-        selection="$(printf "%s\n" "${names[@]}" | rofi -dmenu -format 'i' -fixed-num-lines ${lines} -selected-row ${number} -case-smart)"
+        selection="$(printf "%s\n" "${names[@]}" | rofi -dmenu -format 'i' -fixed-num-lines ${lines} -selected-row ${index} -case-smart)"
     else
         notify-send "layout-switcher" "requires [rofi]"
         return 1
@@ -45,10 +50,9 @@ function switch_kb_layout {
     #     return 1
     # fi
     #
-    if [[ -n "${variants[$selection]}" ]]; then
-        setxkbmap -layout "${layouts[$selection]}" -variant "${variants[$selection]}"
-    else
-        setxkbmap -layout "${layouts[$selection]}"
+    setxkbmap "${layouts[$selection]}" "${variants[$selection]}"
+    if [[ $? -ne 0 ]]; then
+        notify-send "layout-switcher" "failed to set layout\n[${layouts[$selection]}:${variants[$selection]}]"
     fi
 }
 
