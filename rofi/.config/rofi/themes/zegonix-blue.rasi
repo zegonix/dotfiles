@@ -20,7 +20,7 @@
 
 window {
   location: center;
-  width: 35%;
+  width: 25%;
 
   background-color: @zx-background;
 
