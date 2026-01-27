@@ -30,7 +30,7 @@ function switch_kb_layout {
     done
 
     if $(which rofi &>/dev/null); then
-        selection="$(printf "%s\n" "${names[@]}" | rofi -dmenu -format 'i' -fixed-num-lines ${lines} -selected-row ${index} -case-smart)"
+        selection="$(printf "%s\n" "${names[@]}" | rofi -dmenu -format 'i' -theme-str "#listview { lines: ${lines}; }" -selected-row ${index} -case-smart)"
     else
         notify-send "layout-switcher" "requires [rofi]"
         return 1

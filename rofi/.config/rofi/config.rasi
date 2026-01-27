@@ -4,7 +4,7 @@
 configuration {
   modes: "combi,window,run";
   combi-modes: "drun,run";
-  drun-match-fields: "filename,name,generic,keywords";
+  drun-match-fields: "name,generic,keywords";
   matching: "fuzzy";
   monitor: -1;
   terminal: "ghostty";

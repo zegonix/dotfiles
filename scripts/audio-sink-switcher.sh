@@ -32,7 +32,7 @@ select_audio_sink() {
     fi
 
     if $(which rofi &>/dev/null); then
-        selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -dmenu -fixed-num-lines ${lines} -selected-row ${number} -case-smart)"
+        selection="$(printf "%s\n" "${names[@]//\"/}" | rofi -dmenu -theme-str "#listview { lines: ${lines}; }" -selected-row ${number} -case-smart)"
     elif $(which fuzzel &>/dev/null); then
         selection="$(printf "%s\n" "${names[@]//\"/}" | fuzzel --lines ${lines} --dmenu --select-index ${number})"
     else
