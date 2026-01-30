@@ -15,12 +15,6 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- clear highlights
 vim.keymap.set("n", "<Esc>", ":noh<CR>", opts)
 
--- save file
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
-
--- quit file
-vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts) -- this overwrites the mapping for visual block mode, v-block can be entered via C-v while in visual mode
-
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
 
