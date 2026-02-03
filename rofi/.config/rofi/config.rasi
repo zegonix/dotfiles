@@ -9,6 +9,10 @@ configuration {
   monitor: -1;
   terminal: "ghostty";
   case-sensitive: false;
+  kb-row-up: "Up,Control+k";
+  kb-row-down: "Down,Control+j";
+  kb-accept-entry: "Return,Control+m";
+  kb-remove-to-eol: "";
   timeout {
       action: "kb-cancel";
       delay:  0;
