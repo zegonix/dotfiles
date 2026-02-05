@@ -164,8 +164,8 @@ bindsym $mod+o move workspace to output up
 bindsym $mod+p move workspace to output right
 
 # take screenshots
-bindsym $mod+s       exec --no-startup-id maim -su | xclip -selection clipboard -t image/png
-bindsym $mod+Shift+s exec --no-startup-id maim -su "${HOME}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
+bindsym $mod+s       exec --no-startup-id maim -suo | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec --no-startup-id maim -suo "${HOME}/Pictures/screenshots/$(date '+%Y%m%d_%H%M%S').png"
 
 # use pactl for media keys
 set $refresh_i3status killall -SIGUSR1 i3status
