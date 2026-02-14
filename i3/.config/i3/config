@@ -185,6 +185,7 @@ bindsym $mod+a               exec --no-startup-id bash audio-sink-switcher.sh
 #########################
 
 focus_follows_mouse no
+focus_wrapping no
 mouse_warping none
 
 ############################
@@ -212,7 +213,7 @@ set $magenta    #e02482
 set $l_magenta  #fbaddd
 set $d_blue     #001d42
 set $indc_focus #a0a0ff
-set $back_focus #ffffff
+set $background #ffffff
 set $text_focus #000000
 set $transp     #00000000
 
@@ -222,7 +223,6 @@ client.focused_inactive $transp  $back_focus  $text_focus  $transp    $transp
 client.unfocused        $transp  $back_focus  $text_focus  $transp    $transp
 client.urgent           $transp  $back_focus  $text_focus  $transp    $transp
 client.placeholder      $transp  $back_focus  $text_focus  $transp    $transp
+client.background       $background
 
-client.background       #ffffff
-
-exec workspace number $sw1
+exec i3-msg workspace number $ws1
