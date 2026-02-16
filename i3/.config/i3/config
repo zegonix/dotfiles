@@ -201,7 +201,8 @@ default_floating_border pixel 0
 for_window [class=".*"] border pixel 1
 
 # gaps between windows and screen border
-gaps inner 12 px
+gaps inner 4 px
+gaps outer 2 px
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
