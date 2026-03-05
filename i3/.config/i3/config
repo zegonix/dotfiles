@@ -112,6 +112,9 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+n split h
 bindsym $mod+v split v
 
+# toggle window between tiling/floating
+bindsym $mod+$Alt+Shift+f floating toggle
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
