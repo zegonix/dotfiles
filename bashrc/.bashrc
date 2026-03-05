@@ -37,7 +37,7 @@ fi
 if $(which eza &>/dev/null); then
     alias list='eza -lao --no-permissions --group-directories-first -s=ext --color=always --time-style long-iso'
 else
-    alias list='ls -hal --color=auto'
+    alias list='ls -hAl --color=auto --group-directories-first'
 fi
 
 # aliases related to `grep`
