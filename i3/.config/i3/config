@@ -233,5 +233,5 @@ exec i3-msg workspace number $ws1
 
 
 # window rules
-for_window [title="Slay.*"] floating enable
+for_window [title="Slay.*" class="steam.*"] floating enable
 
