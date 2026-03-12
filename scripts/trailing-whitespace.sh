@@ -97,10 +97,8 @@ function remove-whitespace {
         [[ -n "${trailing_whitespace}" ]]; then
         tput setaf 1
         tput smso
-        echo "[ DO NOT LEAVE TRAILING WHITE SPACE IN PLAIN TEXT FILES !!! ]"
-        tput sgr0
-        echo ""
         echo "The following files contained whitespace:"
+        tput sgr0
         echo -e "${trailing_whitespace}"
     fi
 
