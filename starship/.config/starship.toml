@@ -9,7 +9,7 @@ $git_branch \
 $git_status\
 [} ](bold zx_light_yellow)\
 $fill$status\
-\n[╰─](bold) $python\ 
+\n[╰─](bold) $python\
 """
 
 # Disable the blank line at the start of the prompt
