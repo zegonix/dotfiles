@@ -44,10 +44,6 @@ fi
 if $(which ug &>/dev/null); then
     alias ugi='ug -j'
 fi
-if $(which rg &>/dev/null); then
-    alias rg='rg --color=always -n'
-    alias rgi='rg -i -n -A 1 -B 1 --color=always'
-fi
 alias grep='grep --color=always'
 
 alias bdiff='diff -uw --color=always'
@@ -93,12 +89,12 @@ fi
 
 # extend PATH variable
 # export PATH=$PATH:~/path/to/add
+personal_scripts=${HOME}/dotfiles/scripts/
 if [[ "$PATH" != *"dotfiles/scripts/"* ]]; then
-    export PATH=$PATH:$HOME/dotfiles/scripts/
+    export PATH=$PATH:${personal_scripts}
 fi
 
 ## source various scripts
-personal_scripts=${HOME}/dotfiles/scripts/
 source_list=()
 source_list+=("$HOME/.bash_paths")
 source_list+=("$HOME/.bash_alias")
@@ -107,7 +103,6 @@ source_list+=("${personal_scripts}/fzf-bash-history.sh")
 source_list+=("${personal_scripts}/trailing-whitespace.sh")
 source_list+=("${personal_scripts}/colors.sh")
 source_list+=("${personal_scripts}/dunst.sh")
-source_list+=("$HOME/.cargo/env")
 
 for script in ${source_list[@]}; do
     if [[ -f ${script} ]]; then
